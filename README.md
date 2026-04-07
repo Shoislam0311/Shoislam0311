@@ -130,7 +130,7 @@ I'm a **browser developer** and **privacy engineer** on a mission to give the in
 ![YOLO](https://github.githubassets.com/assets/yolo-default-be0bbff04951.png)
 ![Quickdraw](https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png)
 
-**106+ Contributions in 2024** | **Active Open Source Maintainer**
+**106+ Contributions in 2026** | **Active Open Source Maintainer**
 
 </div>
 
