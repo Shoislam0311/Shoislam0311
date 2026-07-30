@@ -1,184 +1,106 @@
-<div align="center">
-
-# Showaib Islam
-
 <p align="center">
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Open+Source+Developer;Privacy+Engineer;Browser+Architect" alt="Typing SVG" />
-  </a>
+
+<a href="https://github.com/Shoislam0311"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&width=600&lines=Showaib+Islam" alt="Name"/></a>
+
+<br/><br/>
+
+<a href="https://github.com/Shoislam0311"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Text-Generators/main/Flames/Flames%20Image/Generator/Delivery%20Rider/Delivery%20Rider.gif" width="100" height="100" style="border-radius: 50%; border: 3px solid #06B6D4; box-shadow: 0 0 20px rgba(6,182,212,0.3);" alt="Avatar"/></a>
+
 </p>
 
 <p align="center">
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Text-Generators/main/Flames/Flames%20Image/Generator/Delivery%20Rider/Delivery%20Rider.gif" width="110" height="110" style="border-radius: 50%; border: 3px solid #06B6D4; box-shadow: 0 0 24px rgba(6,182,212,0.35);" alt="Avatar"/>
-  </a>
+  <a href="https://github.com/Shoislam0311"><img src="https://img.shields.io/github/followers/Shoislam0311?style=for-the-badge&logo=github&color=06B6D4&logoColor=white&labelColor=161B22" alt="Followers"/></a>
+  <a href="https://github.com/Shoislam0311"><img src="https://komarev.com/ghpvc/?username=Shoislam0311&style=for-the-badge&color=10B981&label=Views&labelColor=161B22" alt="Views"/></a>
+  <a href="https://github.com/Shoislam0311"><img src="https://img.shields.io/badge/180%2B%20Commits-06B6D4?style=for-the-badge&labelColor=161B22" alt="Commits"/></a>
+</p>
+
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
+
+## About
+
+<p align="center"><a href="https://github.com/Shoislam0311"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=500&lines=Open+Source+Developer;Privacy+Engineer;Browser+Architect" alt="Roles"/></a></p>
+
+<p align="center">An Open-Source Developer who is seeking for everything to be made free. Based in <strong>Bangladesh</strong>, building tools that respect user freedom with zero tracking and zero compromises.</p>
+
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
+
+## Organization
+
+<p align="center"><strong>An open-source anime streaming platform built with Go and React. Features multiple streaming sources with automatic fallback and a clean modern UI.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/Aniraku/Aniraku"><img src="assets/icons/github.svg" width="16" height="16" alt="GitHub"/> <img src="https://img.shields.io/badge/Aniraku-Frontend-3178C6?style=for-the-badge&labelColor=161B22" alt="Aniraku"/></a>
+  <a href="https://github.com/Aniraku/Aniraku-Backend"><img src="assets/icons/server.svg" width="16" height="16" alt="Server"/> <img src="https://img.shields.io/badge/Aniraku-Backend-00ADD8?style=for-the-badge&labelColor=161B22" alt="Backend"/></a>
+  <a href="https://aniraku.vercel.app"><img src="assets/icons/globe.svg" width="16" height="16" alt="Live"/> <img src="https://img.shields.io/badge/aniraku.vercel.app-10B981?style=for-the-badge&labelColor=161B22" alt="Live"/></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://img.shields.io/github/followers/Shoislam0311?style=for-the-badge&logo=github&color=06B6D4&logoColor=white&labelColor=1C1C1E" alt="Followers"/>
-  </a>
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://komarev.com/ghpvc/?username=Shoislam0311&style=for-the-badge&color=10B981&label=Views&labelColor=1C1C1E" alt="Views"/>
-  </a>
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://img.shields.io/badge/180+Contributions-06B6D4?style=for-the-badge&labelColor=1C1C1E" alt="Contributions"/>
-  </a>
-</p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
-
-## About Me
-
-<p align="center">
-
-| | |
-|:---:|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/dYcXZUqRQXwDAAZS.svg" width="24" alt="Shield"/> | <strong>Privacy Advocate</strong> - Building tools that put users first, with zero tracking and zero compromises |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="24" alt="Code"/> | <strong>Open Source Developer</strong> - Believing that everything should be made free and transparent |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/SUlqSAdoHNCsbSFa.svg" width="24" alt="Location"/> | <strong>Based in Bangladesh</strong> - Contributing to the global open source community |
+| | Repository | Language | Description |
+|:---:|:---|:---|:---|
+| <img src="assets/icons/monitor.svg" width="18" height="18" alt="Frontend"/> | [Aniraku](https://github.com/Aniraku/Aniraku) | `JavaScript` | Open-source anime streaming platform with modern UI |
+| <img src="assets/icons/server.svg" width="18" height="18" alt="Backend"/> | [Aniraku-Backend](https://github.com/Aniraku/Aniraku-Backend) | `Go` | Backend API for streaming sources with automatic fallback |
 
 </p>
 
-<blockquote>
-<p align="center"><em>"An Open-Source Developer who is seeking for everything to be made free."</em></p>
-</blockquote>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
+## Projects
 
-## Featured Projects
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=2ea444&center=true&vCenter=true&width=500&lines=Projects+That+Define+My+Journey" alt="Projects"/>
-</p>
+<p align="center"><a href="https://github.com/Shoislam0311"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=2ea444&center=true&vCenter=true&width=500&lines=Featured+Projects" alt="Projects"/></a></p>
 
 ### Birthday Portfolio for My Sister
 
 <p align="center">
-  <a href="https://birthday-portfolio-for-my-sis.vercel.app/">
-    <img src="https://img.shields.io/badge/Live%20Demo-TypeScript-3178C6?style=for-the-badge&labelColor=1C1C1E" alt="Birthday Portfolio"/>
-  </a>
+  <a href="https://birthday-portfolio-for-my-sis.vercel.app/"><img src="assets/icons/external-link.svg" width="16" height="16" alt="Live"/> <img src="https://img.shields.io/badge/Live%20Demo-birthday-portfolio.vercel.app-10B981?style=for-the-badge&labelColor=161B22" alt="Live"/></a>
+  <a href="https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis"><img src="assets/icons/github.svg" width="16" height="16" alt="Source"/> <img src="https://img.shields.io/badge/Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=161B22" alt="Source"/></a>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=161B22" alt="TypeScript"/>
 </p>
+
+<p align="center">A birthday portfolio with modern layout and send wish system. Built with TypeScript, featuring an interactive wish delivery experience.</p>
 
 <p align="center">
-A birthday portfolio with modern layout and send wish system. Built with TypeScript, featuring an interactive wish delivery experience.
+  <img src="assets/icons/code.svg" width="16" height="16" alt="Code"/> <code>TypeScript</code>
+  <img src="assets/icons/git-commit.svg" width="16" height="16" alt="Commits"/> <strong>42 commits</strong>
 </p>
+
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
+
+### Sikder Villa and Resort
 
 <p align="center">
-
-| | Details |
-|:---:|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/cBJNCoMdDISXWHmO.svg" width="20" alt="Browser"/> | **Live:** [birthday-portfolio-for-my-sis.vercel.app](https://birthday-portfolio-for-my-sis.vercel.app/) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="20" alt="Code"/> | **Stack:** TypeScript |
-
+  <a href="https://sikder-three.vercel.app"><img src="assets/icons/external-link.svg" width="16" height="16" alt="Live"/> <img src="https://img.shields.io/badge/Live%20Demo-sikder.vercel.app-10B981?style=for-the-badge&labelColor=161B22" alt="Live"/></a>
+  <a href="https://github.com/Shoislam0311/Sikder"><img src="assets/icons/github.svg" width="16" height="16" alt="Source"/> <img src="https://img.shields.io/badge/Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=161B22" alt="Source"/></a>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=161B22" alt="TypeScript"/>
 </p>
+
+<p align="center">Sikder Villa and Resort - a luxurious hotel in Kuakata, Bangladesh. A modern web experience for a real-world hospitality brand.</p>
 
 <p align="center">
-  <a href="https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis">
-    <img src="https://img.shields.io/badge/View%20Source-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1C1C1E" alt="Source"/>
-  </a>
+  <img src="assets/icons/code.svg" width="16" height="16" alt="Code"/> <code>TypeScript</code>
+  <img src="assets/icons/map-pin.svg" width="16" height="16" alt="Location"/> <strong>Kuakata, Bangladesh</strong>
 </p>
 
-### Sikder Villa & Resort
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
 
-<p align="center">
-  <a href="https://sikder-three.vercel.app">
-    <img src="https://img.shields.io/badge/Live%20Demo-TypeScript-3178C6?style=for-the-badge&labelColor=1C1C1E" alt="Sikder"/>
-  </a>
-</p>
-
-<p align="center">
-Sikder Villa and Resort — a luxurious hotel in Kuakata, Bangladesh. A modern web experience for a real-world hospitality brand.
-</p>
+## Tech Stack
 
 <p align="center">
 
-| | Details |
-|:---:|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/cBJNCoMdDISXWHmO.svg" width="20" alt="Browser"/> | **Live:** [sikder-three.vercel.app](https://sikder-three.vercel.app) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="20" alt="Code"/> | **Stack:** TypeScript |
-
-</p>
-
-<p align="center">
-  <a href="https://github.com/Shoislam0311/Sikder">
-    <img src="https://img.shields.io/badge/View%20Source-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1C1C1E" alt="Source"/>
-  </a>
-</p>
-
-### Miruro API
-
-<p align="center">
-  <a href="https://miruro-api-smoky.vercel.app">
-    <img src="https://img.shields.io/badge/Live%20Demo-Python-3776AB?style=for-the-badge&labelColor=1C1C1E" alt="Miruro API"/>
-  </a>
-</p>
-
-<p align="center">
-The ultimate fully decrypted, native Python API for Miruro. Bypasses the Web Crypto / secure pipe layer to directly extract M3U8 streaming URLs and AniList metadata without headless browsers.
-</p>
-
-<p align="center">
-
-| | Details |
-|:---:|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/server.svg" width="20" alt="Server"/> | **Live:** [miruro-api-smoky.vercel.app](https://miruro-api-smoky.vercel.app) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="20" alt="Code"/> | **Stack:** Python |
-
-</p>
-
-<p align="center">
-  <a href="https://github.com/Shoislam0311/Miruro-API">
-    <img src="https://img.shields.io/badge/View%20Source-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1C1C1E" alt="Source"/>
-  </a>
-</p>
-
-### Iron Vault
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Private%20Repo-6B7280?style=for-the-badge&labelColor=1C1C1E" alt="Private"/>
-</p>
-
-<p align="center">
-Private storage core. Zero public trace. Personal cloud, locked down.
-</p>
-
-<p align="center">
-
-| | Details |
-|:---:|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/lock.svg" width="20" alt="Lock"/> | **Status:** Private Repository |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="20" alt="Code"/> | **Stack:** Jupyter Notebook |
-
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
-
-## Tech Arsenal
-
-<p align="center">
-
-| | Technology | Role |
+| | Technology | Category |
 |:---:|:---|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/cBJNCoMdDISXWHmO.svg" width="20" alt="Browser"/> | `TypeScript` | Primary Language |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/server.svg" width="20" alt="Server"/> | `Python` | API Development |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/BnMYppHWhFjBPZzy.svg" width="20" alt="Terminal"/> | `Shell Scripting` | Automation |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/HVXzwDwsAcQGRWIE.svg" width="20" alt="Link"/> | `Git / GitHub Actions` | CI/CD Pipeline |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/dYcXZUqRQXwDAAZS.svg" width="20" alt="Shield"/> | `Privacy Engineering` | Security Focus |
+| <img src="assets/icons/code-2.svg" width="18" height="18" alt="Code"/> | `TypeScript` | Primary Language |
+| <img src="assets/icons/terminal.svg" width="18" height="18" alt="Terminal"/> | `Shell Scripting` | Automation |
+| <img src="assets/icons/server.svg" width="18" height="18" alt="Server"/> | `Go` | Backend Development |
+| <img src="assets/icons/cpu.svg" width="18" height="18" alt="CPU"/> | `Python` | API Development |
+| <img src="assets/icons/git-commit.svg" width="18" height="18" alt="Git"/> | `Git / GitHub Actions` | CI/CD Pipeline |
+| <img src="assets/icons/shield.svg" width="18" height="18" alt="Shield"/> | `Privacy Engineering` | Security Focus |
 
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
 
-## GitHub Impact
+## GitHub Stats
 
 <p align="center">
 
@@ -186,107 +108,44 @@ Private storage core. Zero public trace. Personal cloud, locked down.
 
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
 
-## Current Focus
+## Activity
 
 <p align="center">
 
-| | Focus Area | Description |
+| | Metric | Value |
 |:---:|:---|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/RXPBCkhcCFRqePrh.svg" width="20" alt="Target"/> | <strong>Project Delivery</strong> | Shipping production-ready applications |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/dYcXZUqRQXwDAAZS.svg" width="20" alt="Shield"/> | <strong>Privacy-First Design</strong> | Building tools that respect user freedom |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/BoOntvHnlgGhCCFX.svg" width="20" alt="Users"/> | <strong>Open Source</strong> | Making everything free and accessible |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/ZVHYinBRlAQISWwh.svg" width="20" alt="Sparkle"/> | <strong>Innovation</strong> | Exploring new architectures and patterns |
+| <img src="assets/icons/git-commit.svg" width="18" height="18" alt="Commits"/> | **Total Contributions** | 180+ in 2026 |
+| <img src="assets/icons/award.svg" width="18" height="18" alt="Awards"/> | **GitHub Badges** | Pull Shark, Pair Extraordinaire, YOLO, Quickdraw |
+| <img src="assets/icons/users.svg" width="18" height="18" alt="Org"/> | **Organization** | [@Aniraku](https://github.com/Aniraku) |
+| <img src="assets/icons/github.svg" width="18" height="18" alt="GitHub"/> | **GitHub Since** | June 2025 |
 
 </p>
 
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
+
+## Connect
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
+  <a href="mailto:sho.islam0311@gmail.com"><img src="assets/icons/mail.svg" width="20" height="20" alt="Email"/> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=161B22" alt="Email"/></a>
+  <a href="https://www.facebook.com/profile.php?id=61572663361914"><img src="assets/icons/users.svg" width="20" height="20" alt="Facebook"/> <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white&labelColor=161B22" alt="Facebook"/></a>
+  <a href="https://www.threads.com/@sho.islam0311"><img src="assets/icons/message-circle.svg" width="20" height="20" alt="Threads"/> <img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white&labelColor=161B22" alt="Threads"/></a>
+  <a href="https://instagram.com/sho_islam0311"><img src="assets/icons/feather.svg" width="20" height="20" alt="Instagram"/> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=161B22" alt="Instagram"/></a>
 </p>
 
-## Achievements
-
-<p align="center">
-  <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" width="100" alt="Pull Shark"/>
-  <img src="https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png" width="100" alt="Pair Extraordinaire"/>
-  <img src="https://github.githubassets.com/assets/yolo-default-be0bbff04951.png" width="100" alt="YOLO"/>
-  <img src="https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png" width="100" alt="Quickdraw"/>
-</p>
-
-<p align="center">
-  <strong>180+ Contributions in 2026</strong> &nbsp;|&nbsp; <strong>Active Open Source Contributor</strong>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
-
-## Connect With Me
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/></p>
 
 <p align="center">
 
-| | Platform | Link |
-|:---:|:---|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/DJHvYTUYsLEnAhqZ.svg" width="22" alt="Mail"/> | <strong>Email</strong> | [sho.islam0311@gmail.com](mailto:sho.islam0311@gmail.com) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/cBJNCoMdDISXWHmO.svg" width="22" alt="Browser"/> | <strong>Facebook</strong> | [Profile](https://www.facebook.com/profile.php?id=61572663361914) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/HVXzwDwsAcQGRWIE.svg" width="22" alt="Link"/> | <strong>Threads</strong> | [@sho.islam0311](https://www.threads.com/@sho.islam0311) |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/sparkle.svg" width="22" alt="Instagram"/> | <strong>Instagram</strong> | [@sho_islam0311](https://instagram.com/sho_islam0311) |
+<a href="https://github.com/Shoislam0311"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2500&pause=500&color=06B6D4&center=true&vCenter=true&width=400&lines=Made+with+Love+in+Bangladesh;Building+a+freer+internet;One+commit+at+a+time" alt="Footer"/></a>
 
-</p>
+<br/><br/>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
+<a href="https://github.com/Shoislam0311"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=161B22" alt="GitHub"/></a>
 
-## Let's Collaborate
+<br/><br/>
 
-<p align="center">
-I'm always looking to connect with like-minded builders. If you're passionate about open source, privacy, or building a freer internet, let's work together.
-</p>
-
-<p align="center">
-
-| | Who I Work With | What We Build |
-|:---:|:---|:---|
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/dYcXZUqRQXwDAAZS.svg" width="20" alt="Shield"/> | <strong>Privacy Advocates</strong> | Making the web safer for everyone |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/bxLdDHzvnqyEwirP.svg" width="20" alt="Code"/> | <strong>Open Source Developers</strong> | Building free, transparent software |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/BoOntvHnlgGhCCFX.svg" width="20" alt="Users"/> | <strong>Community Builders</strong> | Growing the open source ecosystem |
-| <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663860255011/ZVHYinBRlAQISWwh.svg" width="20" alt="Sparkle"/> | <strong>Innovators</strong> | Pushing the boundaries of what's possible |
-
-</p>
-
-<p align="center">
-  <a href="mailto:sho.islam0311@gmail.com">
-    <img src="https://img.shields.io/badge/Get%20In%20Touch-06B6D4?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1C1C1E" alt="Get In Touch"/>
-  </a>
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://img.shields.io/badge/Follow%20Me-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1C1C1E" alt="Follow"/>
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=gradient&height=2&section=header" width="100%"/>
-</p>
-
-<p align="center">
-
-<br>
-
-<a href="https://github.com/Shoislam0311">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=500&color=06B6D4&center=true&vCenter=true&width=400&lines=Made+with+Love+in+Bangladesh;Building+a+freer+internet...;One+commit+at+a+time" alt="Footer Typing SVG"/>
-</a>
-
-<br><br>
-
-  <a href="https://github.com/Shoislam0311">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1C1C1E" alt="GitHub"/>
-  </a>
-
-<br><br>
-
-<strong>&copy; 2026 Showaib Islam &middot; All Rights Reserved</strong>
+**&copy; 2026 Showaib Islam. All Rights Reserved.**
 
 </p>
