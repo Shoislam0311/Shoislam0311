@@ -77,8 +77,7 @@ The technology below comes from my private workspace and is described without ex
 ## GitHub pulse
 
 <p align="center">
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Shoislam0311&show_icons=true&hide_border=true&bg_color=00000000&title_color=818CF8&text_color=94A3B8&icon_color=22D3EE&rank_icon=github&include_all_commits=true" alt="Shoaib Islam GitHub statistics" height="180" />
-  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=Shoislam0311&layout=compact&hide_border=true&bg_color=00000000&title_color=818CF8&text_color=94A3B8&langs_count=8" alt="Top languages" height="180" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Shoislam0311&theme=github_dark&show_icons=true&hide_border=true&bg_color=00000000&title_color=818CF8&text_color=94A3B8&icon_color=22D3EE&rank_icon=github&include_all_commits=true" alt="Shoaib Islam GitHub statistics" height="180" />
 </p>
 
 <p align="center">
