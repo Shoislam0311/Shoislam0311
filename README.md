@@ -1,37 +1,36 @@
-# Shoaib Islam
-
-<p align="center"><strong>Software builder working across private infrastructure, product interfaces, and reliable backend systems.</strong></p>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Private%20workspaces-161B22?style=for-the-badge&logo=github&logoColor=white" alt="Private workspaces"/>
-  <img src="https://img.shields.io/badge/Versioned%20storage-06B6D4?style=for-the-badge&logo=git&logoColor=white" alt="Versioned storage"/>
-  <img src="https://img.shields.io/badge/Structured%20data-8B5CF6?style=for-the-badge&logo=postgresql&logoColor=white" alt="Structured data"/>
+  <img src="./assets/profile-banner.svg" alt="Shoaib Islam — building things with intent" width="100%" />
 </p>
 
-## Private Repository Focus
+<p align="center">
+  <a href="https://github.com/Shoislam0311">GitHub</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:sho.islam0311@gmail.com">Email</a>
+</p>
 
-My private repository work is centered on controlled storage, structured data, reproducible experiments, and maintainable personal infrastructure. This profile intentionally describes private work at the technology level only; it does not expose credentials, personal data, private URLs, or operational details.
+## A little context
 
-| Area | Verified technology or artifact | Role |
-|---|---|---|
-| Version control | Git and private GitHub repositories | Access-controlled history and reviewable changes |
-| Data layer | SQL schema material in `SUPABASE.sql` | Repeatable database structure |
-| Experimentation | Jupyter Notebook with LM Studio workflow material | Local research and prototyping |
-| Media organization | M3U playlist files | Structured media metadata |
-| Archive handling | 7z archive | Compressed offline storage |
+I build software with a bias toward **clarity, ownership, and useful details**. My work moves between private infrastructure, product interfaces, structured data, and the quiet engineering required to keep systems dependable.
 
-## Working Principles
+## Private work, documented carefully
 
-I prefer small, inspectable systems with explicit ownership, repeatable setup, and documentation that matches the repository as it exists. Sensitive projects are described conservatively so the profile remains useful without turning private implementation details into public documentation.
+The technology below is drawn from my private workspace and described without exposing its contents:
 
-## Private Workspace
+| Layer | Verified surface | Why it matters |
+|:--|:--|:--|
+| Storage | Git + private GitHub repositories | Reviewable history with controlled access |
+| Data | SQL schema material | Explicit, repeatable structure |
+| Experimentation | Jupyter + LM Studio workflow material | Fast local research and prototyping |
+| Organization | M3U playlists | Human-readable media metadata |
+| Archives | 7z storage | Portable, compressed offline assets |
 
-The private `iron-vault` repository is a storage core for version-controlled personal infrastructure. Its documented surface includes SQL schema material, notebook-based experimentation, media playlists, and archive assets. Access and contents remain restricted to the repository owner.
+> Private does not mean undocumented. It means documented with the right level of restraint.
 
-## Contact
+## How I like to work
 
-For collaboration, visit [GitHub](https://github.com/Shoislam0311) or email [sho.islam0311@gmail.com](mailto:sho.islam0311@gmail.com).
+I prefer small systems that can be inspected, explained, and maintained by the person who owns them. That means fewer mystery layers, clearer boundaries, repeatable setup, and documentation that stays honest as the code changes.
 
----
+## Currently
 
-<p align="center"><sub>Documentation maintained with care; private repository details intentionally kept minimal.</sub></p>
+Focused on building better interfaces, maintaining private digital infrastructure, and turning rough ideas into systems that feel inevitable once they exist.
+
+<p align="center"><sub>Minimal surface. Thoughtful internals. Details matter.</sub></p>
