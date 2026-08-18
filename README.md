@@ -1,211 +1,96 @@
 <div align="center">
 
 <a href="https://github.com/Shoislam0311">
-  <img src="https://github.com/Shoislam0311.png?size=320" width="168" alt="Shoaib Islam" />
+  <img src="https://github.com/Shoislam0311.png?size=240" width="150" alt="Shoaib Islam" />
 </a>
 
-# SHOAIB ISLAM
+# Shoaib Islam
 
-`FULL-STACK DEVELOPER` &nbsp; / &nbsp; `PRODUCT BUILDER` &nbsp; / &nbsp; `DETAILS-FIRST`
+I build web products, services, and small experiences that people can actually use.
 
-<a href="https://readme-typing-svg.demolab.com/"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=D71920&center=true&vCenter=true&repeat=true&width=720&height=45&lines=building+interfaces+people+want+to+use;turning+rough+ideas+into+working+products;frontend+surfaces+%2B+backend+boundaries;small+projects%2C+careful+details" alt="Building interfaces people want to use; turning rough ideas into working products; frontend surfaces and backend boundaries; small projects, careful details" /></a>
-
-<p>
-  <a href="https://github.com/Shoislam0311?tab=repositories"><img src="https://img.shields.io/badge/WORK-REPOSITORIES-111111?style=for-the-badge&logo=github&logoColor=ffffff" alt="Browse repositories" /></a>
-  <a href="mailto:sho.islam0311@gmail.com"><img src="https://img.shields.io/badge/MAIL-SHO.ISLAM0311%40GMAIL.COM-D71920?style=for-the-badge&logo=gmail&logoColor=ffffff" alt="Email Shoaib Islam" /></a>
-</p>
+<a href="https://github.com/Shoislam0311?tab=repositories"><img src="https://img.shields.io/badge/GitHub-View%20repositories-181717?style=flat-square&logo=github&logoColor=white" alt="View repositories" /></a>
+<a href="mailto:sho.islam0311@gmail.com"><img src="https://img.shields.io/badge/Email-Say%20hello-D71920?style=flat-square&logo=gmail&logoColor=white" alt="Email Shoaib Islam" /></a>
+<a href="https://www.aniraku.tech/"><img src="https://img.shields.io/badge/Live%20work-Aniraku-3B82F6?style=flat-square&logo=googlechrome&logoColor=white" alt="Open Aniraku live site" /></a>
 
 </div>
 
 ---
 
-<table>
-<tr>
-<td align="center" width="25%"><sub>BASED IN</sub><br /><strong>BANGLADESH</strong></td>
-<td align="center" width="25%"><sub>PUBLIC BUILDS</sub><br /><strong>03 PROJECTS</strong></td>
-<td align="center" width="25%"><sub>PRIMARY MODE</sub><br /><strong>FULL-STACK</strong></td>
-<td align="center" width="25%"><sub>WORK PRINCIPLE</sub><br /><strong>MAKE IT CLEAR</strong></td>
-</tr>
-</table>
+## A little about me
 
-<div align="center">
+I’m Shoaib, a developer from Bangladesh. I enjoy building the part people see and the part they never see: the interface, the data flow, the service boundary, the deployment, and the details that make a project feel finished.
 
-<a href="https://github.com/Shoislam0311"><img src="https://img.shields.io/github/followers/Shoislam0311?label=FOLLOWERS&style=flat-square&color=111111&labelColor=E5E7EB" alt="GitHub followers" /></a>
-<a href="https://github.com/Shoislam0311?tab=repositories"><img src="https://img.shields.io/github/stars/Shoislam0311?affiliations=OWNER&label=REPOSITORY%20STARS&style=flat-square&color=111111&labelColor=E5E7EB" alt="Repository stars" /></a>
-<a href="https://github.com/Shoislam0311/Shoislam0311/commits/main"><img src="https://img.shields.io/github/last-commit/Shoislam0311/Shoislam0311?label=PROFILE%20UPDATED&style=flat-square&color=D71920&labelColor=111111" alt="Profile README last updated" /></a>
+Most of my public work falls into two places: **my own projects**, where I explore product ideas, and **Aniraku**, the organization I work on with others to build anime discovery and viewing experiences for the web and Android.
 
-</div>
+I prefer showing the work itself over writing a long list of claims, so this README is mostly links, working sites, and real screens from the projects.
 
-## ABOUT / 00
+## Aniraku / organization work
 
-I build software with a bias toward **clarity, ownership, and useful details**. My work moves between responsive product interfaces, backend services, structured data, and the quiet engineering required to make a project dependable.
+<a href="https://www.aniraku.tech/"><img src="https://img.shields.io/badge/OPEN%20THE%20WEB%20APP-www.aniraku.tech-111827?style=for-the-badge&logo=googlechrome&logoColor=60A5FA" alt="Open Aniraku web app" /></a>
+<a href="https://github.com/Aniraku/Aniraku"><img src="https://img.shields.io/badge/READ%20THE%20SOURCE-Aniraku-111827?style=for-the-badge&logo=github&logoColor=white" alt="Open Aniraku source repository" /></a>
+<a href="https://aniraku.github.io/Aniraku-App/"><img src="https://img.shields.io/badge/ANDROID%20APP-Download%20page-111827?style=for-the-badge&logo=android&logoColor=3DDC84" alt="Open Aniraku Android download page" /></a>
 
-I like a good visual system, but I care more about whether the system helps someone do something. Every project below has a different mood; the common thread is the same: a real idea, a real surface, and enough care to make it feel finished.
+**Aniraku** is an open-source anime discovery and viewing platform. The web experience connects discovery, schedules, recommendations, playback, watch history, ratings, bookmarks, comments, and progress so that finding something and coming back to it feels like one flow.
 
-> **Build the useful thing. Give it a point of view. Leave the code kinder than you found it.**
+The public web project is built with `React`, `Vite`, `Artplayer`, `HLS.js`, `AniList`, and `Supabase`. The Android project is a native app with its own player, library, history, relationships, provider controls, and Android 9+ distribution path.
 
-## CONTACT / 01
+<p align="center">
+  <a href="https://www.aniraku.tech/"><img src="https://img.shields.io/badge/WEB-OPEN%20LIVE%20SITE-3B82F6?style=flat-square&logo=googlechrome&logoColor=white" alt="Open Aniraku live site" /></a>
+  <a href="https://github.com/Aniraku/Aniraku-App"><img src="https://img.shields.io/badge/ANDROID-OPEN%20REPOSITORY-111827?style=flat-square&logo=android&logoColor=3DDC84" alt="Open Aniraku Android repository" /></a>
+</p>
 
-<table>
-<tr>
-<td align="center" width="25%">
-<a href="mailto:sho.islam0311@gmail.com"><img src="https://cdn.simpleicons.org/gmail/D71920" width="30" alt="Email" /></a><br />
-<sub>EMAIL</sub><br />
-<a href="mailto:sho.islam0311@gmail.com">SAY HELLO</a>
-</td>
-<td align="center" width="25%">
-<a href="https://github.com/Shoislam0311?tab=repositories"><img src="https://cdn.simpleicons.org/github/111111" width="30" alt="GitHub" /></a><br />
-<sub>GITHUB</sub><br />
-<a href="https://github.com/Shoislam0311?tab=repositories">SEE THE WORK</a>
-</td>
-<td align="center" width="25%">
-<a href="https://sikder-three.vercel.app/"><img src="https://cdn.simpleicons.org/googlechrome/111111" width="30" alt="Live projects" /></a><br />
-<sub>LIVE WORK</sub><br />
-<a href="https://sikder-three.vercel.app/">OPEN A PROJECT</a>
-</td>
-<td align="center" width="25%">
-<a href="https://github.com/Shoislam0311/Shoislam0311"><img src="https://cdn.simpleicons.org/markdown/111111" width="30" alt="Markdown profile" /></a><br />
-<sub>PROFILE</sub><br />
-<a href="https://github.com/Shoislam0311/Shoislam0311">SOURCE FILE</a>
-</td>
-</tr>
-</table>
+### Aniraku Android — real screens from the app
 
-## SELECTED WORK / 02
+These are not mockups or generated artwork. They are the repository's own native captures from the implemented Android application.
 
-### 01 — MIRURO API V3
+<p align="center">
+  <a href="https://github.com/Aniraku/Aniraku-App"><img src="https://raw.githubusercontent.com/Aniraku/Aniraku-App/main/site/assets/screens/home.jpg" width="23%" alt="Aniraku Android Home screen" /></a>
+  <a href="https://github.com/Aniraku/Aniraku-App"><img src="https://raw.githubusercontent.com/Aniraku/Aniraku-App/main/site/assets/screens/catalog.jpg" width="23%" alt="Aniraku Android Catalog screen" /></a>
+  <a href="https://github.com/Aniraku/Aniraku-App"><img src="https://raw.githubusercontent.com/Aniraku/Aniraku-App/main/site/assets/screens/watch.jpg" width="23%" alt="Aniraku Android Watch screen" /></a>
+  <a href="https://github.com/Aniraku/Aniraku-App"><img src="https://raw.githubusercontent.com/Aniraku/Aniraku-App/main/site/assets/screens/profile.jpg" width="23%" alt="Aniraku Android Profile screen" /></a>
+</p>
 
-<a href="https://github.com/Shoislam0311/miruro-api-v3"><img src="https://raw.githubusercontent.com/Shoislam0311/miruro-api-v3/main/assets/aura-banner.svg" alt="Miruro API V3 — Data, without the drag." width="100%" /></a>
-
-<table>
-<tr>
-<td width="65%" valign="top">
-
-A browser-aware **FastAPI layer** for clean, resilient upstream access. This public fork packages an anime streaming API for multiple deployment surfaces, including Vercel, Railway, Render, Docker, and Replit.
-
-<a href="https://github.com/Shoislam0311/miruro-api-v3"><img src="https://img.shields.io/github/languages/top/Shoislam0311/miruro-api-v3?style=flat-square&color=111111&label=PYTHON" alt="Miruro API Python" /></a>
-<a href="https://github.com/Shoislam0311/miruro-api-v3"><img src="https://img.shields.io/github/last-commit/Shoislam0311/miruro-api-v3?style=flat-square&color=3B82F6&label=UPDATED" alt="Miruro API last commit" /></a>
-<a href="https://miruro-api-v3.onrender.com/"><img src="https://img.shields.io/badge/DEPLOYMENT-RENDER-3B82F6?style=flat-square" alt="Miruro API Render deployment" /></a>
-
-</td>
-<td width="35%" valign="top">
-
-**PROJECT SIGNAL**
-
-`API`
-
-`DEPLOYABLE`
-
-`BROWSER-AWARE`
-
-**READ NEXT**
-
-[Source repository →](https://github.com/Shoislam0311/miruro-api-v3)
-
-[Live endpoint →](https://miruro-api-v3.onrender.com/)
-
-</td>
-</tr>
-</table>
+<p align="center"><sub>Home · Catalog · Watch · Profile — open the <a href="https://github.com/Aniraku/Aniraku-App">Android repository</a> to see the rest of the screen set.</sub></p>
 
 <details>
-<summary><strong>MIRURO / TECHNICAL NOTES</strong></summary>
+<summary><strong>What is inside the Android build?</strong></summary>
+
+The app repository documents a native playback experience, watch-history recovery, a persistent cache, Relationships, Downloads for eligible progressive sources, provider and audio controls, AniSkip, fullscreen playback, and list synchronization. It also includes additional captures for Random, Schedule, Details, Alerts, and the Profile space.
+
+<a href="https://github.com/Aniraku/Aniraku-App/tree/main/site/assets/screens">Browse every screen asset →</a>
+
+</details>
+
+## My other public work
+
+### Sikder Villa & Resort
+
+<a href="https://sikder-three.vercel.app/"><img src="https://img.shields.io/badge/OPEN%20LIVE%20SITE-sikder--three.vercel.app-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Sikder live site" /></a>
+<a href="https://github.com/Shoislam0311/Sikder"><img src="https://img.shields.io/badge/SOURCE-Shoislam0311%2FSikder-111827?style=for-the-badge&logo=github&logoColor=white" alt="Open Sikder source repository" /></a>
+
+A hospitality website for a resort in Kuakata, Bangladesh. It brings rooms, dining, events, wellness, gallery content, contact, and reservations into one place instead of treating each page like a separate site.
+
+`Next.js` · `React` · `TypeScript` · `Tailwind CSS` · `Prisma` · `SQLite` · `NextAuth` · `Bun`
+
+### Birthday Portfolio
+
+<a href="https://birthday-portfolio-for-my-sis.vercel.app/"><img src="https://img.shields.io/badge/OPEN%20LIVE%20SITE-birthday--portfolio-EC4899?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Birthday Portfolio live site" /></a>
+<a href="https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis"><img src="https://img.shields.io/badge/SOURCE-Birthday--Portfolio-111827?style=for-the-badge&logo=github&logoColor=white" alt="Open Birthday Portfolio source repository" /></a>
+
+A personal birthday experience made for my sister. It uses messages, motion, cards, dialogs, and small interactions to make a website that feels specific to one person rather than like a generic landing page.
+
+`React` · `TypeScript` · `Vite` · `Tailwind CSS` · `Framer Motion` · `Embla Carousel` · `Lucide React`
+
+### Miruro API V3
+
+<a href="https://miruro-api-v3.onrender.com/"><img src="https://img.shields.io/badge/OPEN%20DEPLOYMENT-miruro--api--v3.onrender.com-3B82F6?style=for-the-badge&logo=render&logoColor=white" alt="Open Miruro API deployment" /></a>
+<a href="https://github.com/Shoislam0311/miruro-api-v3"><img src="https://img.shields.io/badge/SOURCE-miruro--api--v3-111827?style=for-the-badge&logo=github&logoColor=white" alt="Open Miruro API source repository" /></a>
+
+A Python/FastAPI service with deployment configuration for Vercel, Railway, Render, Docker, and Replit. The repository is a public fork and keeps the service boundary, deployment options, and upstream cautions visible.
 
 `Python` · `FastAPI` · `Docker` · `Vercel` · `Railway` · `Render` · `Replit`
 
-The repository keeps its deployment surface explicit and documents upstream boundaries, request volume, credentials, and contribution expectations.
-
-</details>
-
-### 02 — SIKDER VILLA & RESORT
-
-<a href="https://sikder-three.vercel.app/"><img src="https://raw.githubusercontent.com/Shoislam0311/Sikder/main/assets/aura-banner.svg" alt="Sikder Villa and Resort — A stay worth remembering." width="100%" /></a>
-
-<table>
-<tr>
-<td width="65%" valign="top">
-
-A hospitality experience translated into a calmer digital front door. Rooms, dining, events, wellness, gallery content, contact, and reservation flows share one consistent visual home for a real resort in Kuakata, Bangladesh.
-
-<a href="https://github.com/Shoislam0311/Sikder"><img src="https://img.shields.io/github/languages/top/Shoislam0311/Sikder?style=flat-square&color=111111&label=TYPESCRIPT" alt="Sikder TypeScript" /></a>
-<a href="https://github.com/Shoislam0311/Sikder"><img src="https://img.shields.io/github/last-commit/Shoislam0311/Sikder?style=flat-square&color=8B5CF6&label=UPDATED" alt="Sikder last commit" /></a>
-<a href="https://sikder-three.vercel.app/"><img src="https://img.shields.io/badge/LIVE-VERCEL-8B5CF6?style=flat-square&logo=vercel&logoColor=ffffff" alt="Sikder Vercel deployment" /></a>
-
-</td>
-<td width="35%" valign="top">
-
-**PROJECT SIGNAL**
-
-`HOSPITALITY`
-
-`EDITORIAL`
-
-`RESERVATION`
-
-**READ NEXT**
-
-[Source repository →](https://github.com/Shoislam0311/Sikder)
-
-[Live experience →](https://sikder-three.vercel.app/)
-
-</td>
-</tr>
-</table>
-
-<details>
-<summary><strong>SIKDER / TECHNICAL NOTES</strong></summary>
-
-`Next.js` · `React` · `TypeScript` · `Tailwind CSS` · `Radix UI` · `Prisma` · `SQLite` · `NextAuth` · `next-intl` · `Zustand` · `Bun`
-
-The experience is organized around a simple guest journey: discover, explore rooms, feel the place, reserve, arrive.
-
-</details>
-
-### 03 — BIRTHDAY PORTFOLIO
-
-<a href="https://birthday-portfolio-for-my-sis.vercel.app/"><img src="https://raw.githubusercontent.com/Shoislam0311/Birthday-Portfolio-for-My-Sis/main/assets/aura-banner.svg" alt="Birthday Portfolio — A birthday, in motion." width="100%" /></a>
-
-<table>
-<tr>
-<td width="65%" valign="top">
-
-A small digital world built for one important person. This responsive portfolio combines personal messages, interactive wishes, soft motion, cards, dialogs, and mobile-first transitions into a celebration that feels made rather than assembled.
-
-<a href="https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis"><img src="https://img.shields.io/github/languages/top/Shoislam0311/Birthday-Portfolio-for-My-Sis?style=flat-square&color=111111&label=TYPESCRIPT" alt="Birthday Portfolio TypeScript" /></a>
-<a href="https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis"><img src="https://img.shields.io/github/last-commit/Shoislam0311/Birthday-Portfolio-for-My-Sis?style=flat-square&color=EC4899&label=UPDATED" alt="Birthday Portfolio last commit" /></a>
-<a href="https://birthday-portfolio-for-my-sis.vercel.app/"><img src="https://img.shields.io/badge/LIVE-VISIT-EC4899?style=flat-square&logo=googlechrome&logoColor=ffffff" alt="Birthday Portfolio live experience" /></a>
-
-</td>
-<td width="35%" valign="top">
-
-**PROJECT SIGNAL**
-
-`PERSONAL`
-
-`MOTION`
-
-`MEMORY`
-
-**READ NEXT**
-
-[Source repository →](https://github.com/Shoislam0311/Birthday-Portfolio-for-My-Sis)
-
-[Open the experience →](https://birthday-portfolio-for-my-sis.vercel.app/)
-
-</td>
-</tr>
-</table>
-
-<details>
-<summary><strong>BIRTHDAY / TECHNICAL NOTES</strong></summary>
-
-`React` · `TypeScript` · `Vite` · `Tailwind CSS` · `Radix UI` · `Framer Motion` · `Embla Carousel` · `Lucide React` · `Sonner`
-
-The experience map is simple: arrival, memory, interaction, keep. Motion supports the story instead of interrupting it.
-
-</details>
-
-## TOOLCHAIN / 03
+## What I reach for
 
 <div align="center">
 
@@ -216,48 +101,29 @@ The experience map is simple: arrival, memory, interaction, keep. Motion support
 <a href="https://www.python.org/"><img src="https://cdn.simpleicons.org/python/3776AB" width="34" height="34" alt="Python" /></a>
 <a href="https://www.postgresql.org/"><img src="https://cdn.simpleicons.org/postgresql/4169E1" width="34" height="34" alt="PostgreSQL" /></a>
 <a href="https://git-scm.com/"><img src="https://cdn.simpleicons.org/git/F05032" width="34" height="34" alt="Git" /></a>
-<a href="https://vite.dev/"><img src="https://cdn.simpleicons.org/vite/646CFF" width="34" height="34" alt="Vite" /></a>
 <a href="https://www.prisma.io/"><img src="https://cdn.simpleicons.org/prisma/111111" width="34" height="34" alt="Prisma" /></a>
 
-<br />
-
-<sub>THE STACK IS A TOOLBOX, NOT A PERSONALITY.</sub>
-
 </div>
 
-## ACTIVITY / 04
+## A few direct links
 
-<div align="center">
-
-<a href="https://github.com/DenverCoder1/github-readme-streak-stats"><img src="https://streak-stats.demolab.com/?user=Shoislam0311&theme=dark&hide_border=true&background=0F1115&ring=D71920&fire=D71920&currStreakLabel=FFFFFF&sideLabels=9CA3AF&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6B7280" alt="Shoaib Islam GitHub contribution streak" width="68%" /></a>
-
-<br />
-
-<a href="https://github.com/Ashutosh00710/github-readme-activity-graph"><img src="https://github-readme-activity-graph.vercel.app/graph?username=Shoislam0311&bg_color=0F1115&color=F9FAFB&line=D71920&point=FFFFFF&area=true&hide_border=true&custom_title=CONTRIBUTION%20SIGNAL" alt="Shoaib Islam GitHub activity graph" width="94%" /></a>
-
-</div>
-
-## ENDPOINT / 05
-
-<div align="center">
-
-<a href="mailto:sho.islam0311@gmail.com"><img src="https://img.shields.io/badge/OPEN%20A%20CONVERSATION-D71920?style=for-the-badge&logo=gmail&logoColor=ffffff" alt="Email Shoaib Islam" /></a>
-<a href="https://github.com/Shoislam0311?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE%20ALL%20REPOSITORIES-111111?style=for-the-badge&logo=github&logoColor=ffffff" alt="Explore all repositories" /></a>
-
-<br />
-<br />
-
-<sub>ONE README · THREE PROJECTS · ZERO TEMPLATE FILLER</sub>
-
-</div>
+| Place | Link |
+|:--|:--|
+| GitHub | [Shoislam0311](https://github.com/Shoislam0311) |
+| Organization | [Aniraku](https://github.com/Aniraku) |
+| Web project | [aniraku.tech](https://www.aniraku.tech/) |
+| Android project | [Aniraku-App](https://github.com/Aniraku/Aniraku-App) |
+| Email | [sho.islam0311@gmail.com](mailto:sho.islam0311@gmail.com) |
 
 <details>
-<summary><strong>REFERENCE LAYER / SOURCES</strong></summary>
+<summary><strong>Notes about this README</strong></summary>
 
-This README is an original composition informed by research into strong GitHub profile patterns, including [ilyamiro](https://github.com/ilyamiro), [Anurag Hazra](https://github.com/anuraghazra), [Forrest Knight](https://github.com/ForrestKnight), and [DenverCoder1](https://github.com/denvercoder1), as well as the community collection [Awesome GitHub Profile README](https://github.com/abhisheknaiidu/awesome-github-profile-readme).
-
-The dynamic and visual components use documented community projects: [Shields.io](https://github.com/badges/shields), [Simple Icons](https://github.com/simple-icons/simple-icons), [Readme Typing SVG](https://github.com/denvercoder1/readme-typing-svg), [GitHub Readme Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats), and [GitHub Readme Activity Graph](https://github.com/Ashutosh00710/github-readme-activity-graph). The project banners are served from the user's own public repositories.
-
-GitHub's official documentation confirms that profile READMEs are rendered from the public username-matching repository's root `README.md`, and the composition uses documented Markdown, HTML, tables, images, links, and disclosure sections: [profile README documentation](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme) and [Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Everything here is linked to a real public repository, live site, or repository-owned screen. The Android images come from `Aniraku/Aniraku-App/site/assets/screens/`; the profile does not use generated banners, fake app mockups, or decorative project artwork.
 
 </details>
+
+<div align="center">
+
+<sub>Built with Markdown, real project links, and screenshots from the work itself.</sub>
+
+</div>
