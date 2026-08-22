@@ -34,12 +34,6 @@
 
 </div>
 
-<div align="center">
-
-<img src="./assets/reference/elliottophellia/mid-banner.png" width="82%" alt="Anime fan-art mood panel" />
-
-</div>
-
 ## hi, i'm showaib
 
 > an open-source developer from Bangladesh making web things, API things, and occasionally overthinking a button for three hours.
@@ -47,6 +41,12 @@
 I like interfaces with a little soul, code that stays readable after the dopamine wears off, and side projects that start as “this would be funny” and somehow become real. My current main-character arc is **Aniraku**: anime discovery and watching, built with care for both web and Android.
 
 I’m usually somewhere between frontend polish, backend systems, deployment rabbit holes, anime, and music that makes the room feel like a different decade.
+
+<div align="center">
+
+<img src="./assets/reference/elliottophellia/mid-banner.png" width="82%" alt="Anime fan-art mood panel" />
+
+</div>
 
 ---
 
