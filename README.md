@@ -4,9 +4,7 @@
 
 <br /><br />
 
-<h1>showaib / しょうあいぶ</h1>
-
-<p><i>soft pixels · loud ideas · tiny bit of anime magic</i></p>
+<img src="./assets/ui/identity.svg" width="100%" alt="showaib / しょうあいぶ" />
 
 <p>
   <a href="https://github.com/Shoislam0311">github</a>
@@ -88,9 +86,9 @@ I’m usually somewhere between frontend polish, backend systems, deployment rab
 
 <div align="center">
 
-<a href="https://open.spotify.com/user/31pxuilycotlyuaehfphqimevlaq"><img src="https://img.shields.io/badge/listen%20on%20spotify-1DB954?style=for-the-badge&labelColor=18111f&logo=spotify&logoColor=ffffff" alt="Listen on Spotify" /></a>
+<a href="https://shoislam0311.github.io/Shoislam0311/"><img src="./assets/ui/retro-fm.svg" width="100%" alt="Retro FM — play BLEACH Opening 1" /></a>
 
-<p><i>anime openings · retro sounds · late-night loops</i></p>
+<p><sub><a href="https://shoislam0311.github.io/Shoislam0311/">open the real player</a> · <a href="https://open.spotify.com/track/6MKOd8KDFzwpu8Vz6ccZU5">open directly in Spotify</a></sub></p>
 
 </div>
 

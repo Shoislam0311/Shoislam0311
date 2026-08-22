@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" role="img" aria-labelledby="title desc">
+  <title id="title">showaib / しょうあいぶ</title>
+  <desc id="desc">A soft anime-inspired profile title with lavender, pink, cream, and hand-drawn star details.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8fb"/>
+      <stop offset="0.52" stop-color="#f2e8ff"/>
+      <stop offset="1" stop-color="#ffe5ef"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" x2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="0.5" stop-color="#db2777"/>
+      <stop offset="1" stop-color="#be185d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#9b6aa8" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect x="18" y="18" width="1164" height="174" rx="34" fill="url(#paper)" stroke="#d8b4dc" stroke-width="5" stroke-dasharray="9 10" filter="url(#shadow)"/>
+  <path d="M56 146 C 188 102, 252 174, 378 136 S 612 112, 736 148 S 976 180, 1144 112" fill="none" stroke="#f0a5c8" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <g fill="#f59ac1" stroke="#7c3aed" stroke-width="3" stroke-linejoin="round">
+    <path d="M86 55 l8 18 19 2-15 12 5 19-17-10-17 10 5-19-15-12 19-2z"/>
+    <path d="M1081 55 l7 16 18 2-14 11 5 18-16-9-16 9 5-18-14-11 18-2z"/>
+    <path d="M1034 138 l5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1z"/>
+  </g>
+  <g fill="#7c3aed" opacity=".8">
+    <circle cx="143" cy="145" r="5"/><circle cx="1072" cy="106" r="5"/><circle cx="196" cy="53" r="4"/>
+  </g>
+  <text x="600" y="105" text-anchor="middle" fill="url(#ink)" font-family="Trebuchet MS, Arial Rounded MT Bold, Noto Sans JP, sans-serif" font-size="60" font-weight="700" letter-spacing="1">showaib / しょうあいぶ</text>
+  <text x="600" y="148" text-anchor="middle" fill="#6b5575" font-family="Trebuchet MS, Arial, sans-serif" font-size="20" letter-spacing="5">SOFT PIXELS · LOUD IDEAS · LITTLE MAGIC</text>
+</svg>
