@@ -4,7 +4,7 @@
 
 <br /><br />
 
-<img src="./assets/ui/identity.svg" width="100%" alt="showaib / しょうあいぶ" />
+<img src="./assets/ui/identity.png" width="100%" alt="showaib / しょうあいぶ" />
 
 <p>
   <a href="https://github.com/Shoislam0311">github</a>

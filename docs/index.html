@@ -3,127 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>showaib — retro fm</title>
-  <meta name="theme-color" content="#171124" />
+  <title>showaib — anime night radio</title>
+  <meta name="theme-color" content="#191126" />
   <style>
-    :root {
-      color-scheme: dark;
-      --ink: #171124;
-      --paper: #fff7fb;
-      --lilac: #d8b4fe;
-      --pink: #f3a6c7;
-      --plum: #3d2355;
-      --green: #1db954;
-    }
-    * { box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 28px;
-      overflow-x: hidden;
-      background:
-        radial-gradient(circle at 12% 12%, rgba(243,166,199,.25), transparent 25%),
-        radial-gradient(circle at 88% 86%, rgba(216,180,254,.22), transparent 28%),
-        var(--ink);
-      color: var(--paper);
-      font-family: "Trebuchet MS", "Arial Rounded MT Bold", system-ui, sans-serif;
-    }
-    .room {
-      width: min(920px, 100%);
-      padding: clamp(22px, 5vw, 64px);
-      border: 2px solid rgba(255,247,251,.24);
-      border-radius: 34px;
-      background: linear-gradient(145deg, rgba(61,35,85,.94), rgba(23,17,36,.97));
-      box-shadow: 0 24px 80px rgba(0,0,0,.35), inset 0 0 0 1px rgba(216,180,254,.18);
-      position: relative;
-      isolation: isolate;
-    }
-    .room::before {
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border: 1px dashed rgba(243,166,199,.42);
-      border-radius: 25px;
-      pointer-events: none;
-      z-index: -1;
-    }
-    .eyebrow {
-      margin: 0 0 12px;
-      color: var(--pink);
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .26em;
-      text-transform: uppercase;
-    }
-    h1 {
-      max-width: 720px;
-      margin: 0;
-      color: var(--paper);
-      font-size: clamp(2.1rem, 7vw, 5rem);
-      line-height: .98;
-      letter-spacing: -.05em;
-      text-shadow: 4px 4px 0 rgba(243,166,199,.18);
-    }
-    .subtitle {
-      max-width: 620px;
-      margin: 18px 0 30px;
-      color: #eadbf3;
-      font-size: clamp(1rem, 2.4vw, 1.2rem);
-      line-height: 1.6;
-    }
-    .art {
-      width: 100%;
-      margin: 8px 0 30px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,247,251,.16);
-      opacity: .92;
-    }
-    .player {
-      overflow: hidden;
-      border: 2px solid var(--lilac);
-      border-radius: 20px;
-      background: #121212;
-      box-shadow: 0 12px 35px rgba(0,0,0,.28);
-    }
-    iframe {
-      display: block;
-      width: 100%;
-      min-height: 352px;
-      border: 0;
-    }
-    .note {
-      margin: 18px 0 0;
-      color: #cbb9d4;
-      font-size: .9rem;
-      line-height: 1.6;
-    }
-    .note a { color: var(--pink); }
-    .back {
-      display: inline-flex;
-      margin-top: 28px;
-      padding: 11px 16px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--pink), var(--lilac));
-      color: var(--ink);
-      font-size: .85rem;
-      font-weight: 800;
-      text-decoration: none;
-      letter-spacing: .04em;
-    }
+    :root { --ink:#191126; --plum:#38234d; --paper:#fff8fb; --pink:#f4a9c8; --lilac:#d7b6ff; --green:#1db954; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; padding:26px; background:radial-gradient(circle at 8% 10%,#51305b 0,transparent 28%),radial-gradient(circle at 92% 88%,#3a285c 0,transparent 30%),var(--ink); color:var(--paper); font-family:"Trebuchet MS","Arial Rounded MT Bold",system-ui,sans-serif; }
+    .shell { width:min(980px,100%); margin:auto; padding:clamp(22px,5vw,60px); background:linear-gradient(145deg,rgba(56,35,77,.96),rgba(25,17,38,.98)); border:2px solid rgba(215,182,255,.5); border-radius:34px; box-shadow:0 26px 80px rgba(0,0,0,.4); }
+    .eyebrow { margin:0 0 10px; color:var(--pink); font-size:.78rem; font-weight:800; letter-spacing:.26em; text-transform:uppercase; }
+    h1 { margin:0; color:var(--paper); font-size:clamp(2.2rem,7vw,5rem); line-height:.96; letter-spacing:-.055em; text-shadow:4px 4px 0 rgba(244,169,200,.16); }
+    .lead { max-width:680px; margin:18px 0 28px; color:#eadcf4; font-size:1.05rem; line-height:1.65; }
+    .art { display:block; width:100%; margin:0 0 30px; border:1px solid rgba(255,255,255,.16); border-radius:22px; opacity:.94; }
+    .playlist-head { display:flex; align-items:end; justify-content:space-between; gap:18px; margin:0 0 14px; }
+    .playlist-head h2 { margin:0; color:var(--pink); font-size:1.2rem; letter-spacing:.08em; text-transform:uppercase; }
+    .playlist-head p { margin:0; color:#cbb9d4; font-size:.82rem; }
+    .tracks { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr)); gap:14px; }
+    .track { padding:10px; border:1px solid rgba(215,182,255,.45); border-radius:18px; background:rgba(18,14,28,.76); box-shadow:inset 0 0 0 1px rgba(244,169,200,.08); }
+    .track-label { display:flex; justify-content:space-between; padding:3px 8px 9px; color:#f4d5e5; font-family:monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; }
+    iframe { display:block; width:100%; min-height:152px; border:0; border-radius:12px; }
+    .note { margin:22px 0 0; color:#cbb9d4; font-size:.86rem; line-height:1.6; }
+    .note strong { color:var(--pink); }
+    .back { display:inline-flex; margin-top:24px; padding:11px 16px; border-radius:999px; background:linear-gradient(90deg,var(--pink),var(--lilac)); color:var(--ink); text-decoration:none; font-size:.84rem; font-weight:800; }
+    @media (max-width:620px) { body { padding:12px; } .shell { padding:20px 14px; border-radius:24px; } .playlist-head { display:block; } .playlist-head p { margin-top:7px; } }
   </style>
 </head>
 <body>
-  <main class="room">
-    <p class="eyebrow">showaib / retro fm / scene 01</p>
-    <h1>BLEACH OP 01<br />＊〜アスタリスク〜</h1>
-    <p class="subtitle">The one that sounds like orange skies, impossible sword fights, and a main character walking away before the ending theme hits.</p>
+  <main class="shell">
+    <p class="eyebrow">showaib / anime night radio / six tracks</p>
+    <h1>BLEACH moodboard<br />with a little extra chaos.</h1>
+    <p class="lead">A small playlist for late-night coding, dramatic walks to the kitchen, and pretending the next commit is an opening sequence. Press play on whichever track fits the scene.</p>
     <img class="art" src="../assets/reference/elliottophellia/mid-banner.png" alt="Anime fan-art mood artwork" />
-    <section class="player" aria-label="Spotify player for BLEACH Opening 1">
-      <iframe src="https://open.spotify.com/embed/track/1nThz7yEG2vbyI4UmInj5z?utm_source=generator&theme=0&si=867079b581c64263" title="BLEACH — selected Spotify track" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <div class="playlist-head">
+      <h2>now entering the soul society</h2>
+      <p>Spotify embeds · one track at a time</p>
+    </div>
+    <section class="tracks" aria-label="Six Spotify tracks">
+      <article class="track"><div class="track-label"><span>track 01</span><span>bankai</span></div><iframe src="https://open.spotify.com/embed/track/1nThz7yEG2vbyI4UmInj5z?utm_source=generator&theme=0&si=867079b581c64263" title="Spotify track 1" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
+      <article class="track"><div class="track-label"><span>track 02</span><span>playlist cut</span></div><iframe src="https://open.spotify.com/embed/track/4QRCdMTZegDH27rOUbOEFY?utm_source=generator&si=92ec6ec4693d4b4e" title="Spotify track 2" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
+      <article class="track"><div class="track-label"><span>track 03</span><span>playlist cut</span></div><iframe src="https://open.spotify.com/embed/track/6a7su3dkJJXidSuFiowJC2?utm_source=generator&si=d290702de1774360" title="Spotify track 3" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
+      <article class="track"><div class="track-label"><span>track 04</span><span>playlist cut</span></div><iframe src="https://open.spotify.com/embed/track/2x2gA50J9mqwb3HogoizTQ?utm_source=generator&si=0ae0adca5f9d42de" title="Spotify track 4" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
+      <article class="track"><div class="track-label"><span>track 05</span><span>playlist cut</span></div><iframe src="https://open.spotify.com/embed/track/34itNAEl1AQ7by5GPEElH0?utm_source=generator&si=ab3c8ad5ac3046e4" title="Spotify track 5" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
+      <article class="track"><div class="track-label"><span>track 06</span><span>playlist cut</span></div><iframe src="https://open.spotify.com/embed/track/2QOYXEj3jYm7CsVxqeF1Zj?utm_source=generator&si=f7ee7da351174e4e" title="Spotify track 6" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></article>
     </section>
-    <p class="note">Press the play button above. Spotify may ask you to sign in, and playback behavior depends on your Spotify account and browser. This page is the real player; the GitHub README links here because GitHub does not allow interactive Spotify embeds inside README Markdown.</p>
+    <p class="note"><strong>tiny reality check:</strong> Spotify lets you play these tracks from the embeds, but playback is sequential—Spotify will not play six songs simultaneously on one account or device. The GitHub README links here because GitHub sanitizes interactive iframe players on profile Markdown pages.</p>
     <a class="back" href="https://github.com/Shoislam0311">↩ back to the profile</a>
   </main>
 </body>
