@@ -86,9 +86,9 @@ I’m usually somewhere between frontend polish, backend systems, deployment rab
 
 <div align="center">
 
-<a href="https://shoislam0311.github.io/Shoislam0311/"><img src="./assets/ui/retro-fm.svg" width="100%" alt="Retro FM — play BLEACH Opening 1" /></a>
+<a href="https://raw.githack.com/Shoislam0311/Shoislam0311/main/docs/index.html"><img src="./assets/ui/retro-fm.svg" width="100%" alt="Retro FM — play BLEACH Opening 1" /></a>
 
-<p><sub><a href="https://shoislam0311.github.io/Shoislam0311/">open the real player</a> · <a href="https://open.spotify.com/track/1nThz7yEG2vbyI4UmInj5z?utm_source=generator&theme=0&si=867079b581c64263">open directly in Spotify</a></sub></p>
+<p><sub><a href="https://raw.githack.com/Shoislam0311/Shoislam0311/main/docs/index.html">open the six-track player</a> · <a href="https://open.spotify.com/track/1nThz7yEG2vbyI4UmInj5z?utm_source=generator&theme=0&si=867079b581c64263">open directly in Spotify</a></sub></p>
 
 </div>
 
