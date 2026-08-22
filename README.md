@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/reference/innng/profile-character.png" width="100%" alt="Anime fan-art banner" />
+<img src="./assets/reference/innng/profile-wide.png" width="100%" alt="Anime fan-art banner" />
 
 <br /><br />
 
