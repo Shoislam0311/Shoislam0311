@@ -1,10 +1,9 @@
 <div align="center">
 
-<a href="https://github.com/Shoislam0311">
-  <img src="https://github.com/Shoislam0311.png?size=240" width="150" alt="Showaib Islam" />
-</a>
+# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Teacup%20Without%20Handle.png" alt="Teacup Without Handle" width="35" height="35" />  Hey there, I'm Showaib
+<img src="https://github.com/Shoislam0311/Shoislam0311/blob/main/tenor.gif?raw=true" width="120" height="120" style="border-radius: 50%">
 
-# Showaib Islam
+</div>
 
 Developer from Bangladesh. I build web products, APIs, and small personal projects.
 
@@ -89,6 +88,23 @@ A small Python/FastAPI service with configuration for Vercel, Railway, Render, D
 
 </div>
 
+📊 GitHub Analytics
+
+<div align="center">
+  
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=danish-mar&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=0d1117&title_color=a855f7&icon_color=a855f7&text_color=c9d1d9&count_private=true&include_all_commits=true" />
+<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=danish-mar&theme=midnight-purple&hide_border=true&background=0d1117&stroke=a855f7&ring=a855f7&fire=a855f7&currStreakLabel=a855f7" />
+
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=danish-mar&layout=compact&theme=midnight-purple&hide_border=true&bg_color=0d1117&title_color=a855f7&text_color=c9d1d9&langs_count=8" />
+<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=danish-mar&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=a855f7&line=a855f7&point=c9d1d9" />
+
+</div>
+
+<div align="center">
+  
+![](https://github-profile-trophy.vercel.app/?username=Shoislam0311&theme=dracula&no-frame=true&no-bg=true&margin-w=4&column=7)
+
+</div>
 ## Contact
 
 If you want to talk about one of these projects, open an issue in the relevant repository or send me an email at [sho.islam0311@gmail.com](mailto:sho.islam0311@gmail.com).
