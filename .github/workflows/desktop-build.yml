@@ -1,0 +1,83 @@
+name: Build Pi-Music desktop apps
+
+on:
+  pull_request:
+    paths:
+      - "pi-music/native/**"
+      - ".github/workflows/desktop-build.yml"
+  push:
+    branches: [main]
+    tags: ["v*"]
+    paths:
+      - "pi-music/native/**"
+      - ".github/workflows/desktop-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  desktop:
+    name: ${{ matrix.name }} desktop package
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux
+            os: ubuntu-22.04
+          - name: Windows
+            os: windows-latest
+          - name: macOS
+            os: macos-latest
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: pi-music/native
+    env:
+      VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
+      VITE_YOUTUBE_DESKTOP_CLIENT_ID: ${{ secrets.VITE_YOUTUBE_DESKTOP_CLIENT_ID }}
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pi-music/native/pnpm-lock.yaml
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Restore Rust cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: pi-music/native/src-tauri -> target
+      - name: Install Linux webview dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file libssl-dev libayatana-appindicator3-dev librsvg2-dev
+      - name: Install app dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Validate native interface
+        run: pnpm build
+      - name: Build native packages
+        uses: tauri-apps/tauri-action@v0
+        with:
+          projectPath: pi-music/native
+          tagName: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || '' }}
+          releaseName: Pi-Music ${{ github.ref_name }}
+          releaseBody: "Native Pi-Music desktop build for Linux, Windows, and macOS."
+          releaseDraft: true
+          prerelease: false
+      - name: Upload desktop artifact
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pi-music-${{ matrix.name }}
+          path: pi-music/native/src-tauri/target/release/bundle/**
+          if-no-files-found: error

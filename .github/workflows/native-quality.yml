@@ -1,0 +1,37 @@
+name: Validate Pi-Music native source
+
+on:
+  pull_request:
+    paths:
+      - "pi-music/native/**"
+  push:
+    branches: [main]
+    paths:
+      - "pi-music/native/**"
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: pi-music/native
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pi-music/native/pnpm-lock.yaml
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: pi-music/native/src-tauri -> target
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: cargo test --manifest-path src-tauri/Cargo.toml
