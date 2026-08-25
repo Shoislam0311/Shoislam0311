@@ -116,4 +116,5 @@
 - [x] Verify that GitHub Actions completed source validation and produced non-release Linux, Windows, and macOS desktop build artifacts for the current native source; retain package installation smoke tests before any release consideration.
 - [x] Map the official YouTube IFrame ready event to a listener-visible Pi-Music readiness state, separate from cue/play/pause/end/error/autoplay-blocked states, then reverify the player bridge.
 - [x] Map official YouTube player error codes to listener-safe unavailable messages so selected videos explain when playback cannot begin without exposing provider internals.
+- [x] Remove the non-persistent Saved-room counter and present an honest disabled state until an officially permitted saved/favorites capability is designed and authorized.
 - [ ] Audit all remaining Pi-Music documentation for superseded Android/iPhone/Spotify/JioSaavn/local-file product language and either update it to the desktop-only YouTube scope or label it explicitly as historical research.

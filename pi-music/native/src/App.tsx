@@ -69,7 +69,6 @@ function App() {
   const [connection, setConnection] = useState<OnlineConnectionState>("not-connected");
   const [playback, setPlayback] = useState<OnlinePlaybackState>("waiting");
   const [searchValue, setSearchValue] = useState("");
-  const [savedCount, setSavedCount] = useState(0);
   const [vaultUnlocked, setVaultUnlocked] = useState(false);
   const [roomKey, setRoomKey] = useState("");
   const [vaultMessage, setVaultMessage] = useState("");
@@ -264,8 +263,6 @@ function App() {
     else playerController.play();
   };
 
-  const toggleSaved = () => setSavedCount((value) => value + 1);
-
   const disconnect = async () => {
     try { await invoke("disconnect_google"); } catch { /* Preview mode has no native credential store. */ }
     setConnection("not-connected");
@@ -300,7 +297,7 @@ function App() {
         {activeRoom === "Search" && <SearchRoom connection={connection} value={searchValue} cleanValue={cleanSearch} searchState={searchState} searchMessage={searchMessage} results={searchResults} onChange={setSearchValue} onConnect={beginConnection} onSearch={runSearch} onSelect={chooseVideo} />}
         {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} playerReady={playerReady} playerError={playerError} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onPlayerReady={setPlayerReady} onPlayerError={setPlayerError} onControllerReady={setPlayerController} />}
         {activeRoom === "Playlists" && <PlaylistsRoom connection={connection} playlists={playlists} playlistState={playlistState} playlistMessage={playlistMessage} openPlaylistTitle={openPlaylistTitle} playlistItems={playlistItems} playlistItemState={playlistItemState} playlistItemMessage={playlistItemMessage} onConnect={beginConnection} onOpenPlaylist={openPlaylist} onSelectVideo={chooseVideo} />}
-        {activeRoom === "Saved" && <SavedRoom connection={connection} savedCount={savedCount} onConnect={beginConnection} onSave={toggleSaved} />}
+        {activeRoom === "Saved" && <SavedRoom connection={connection} onConnect={beginConnection} />}
         {activeRoom === "Settings" && <SettingsRoom connection={connection} onConnect={beginConnection} onDisconnect={disconnect} />}
         {activeRoom === "Connect" && <ConnectRoom state={connection} vaultUnlocked={vaultUnlocked} roomKey={roomKey} vaultMessage={vaultMessage} connectionNoticeAccepted={connectionNoticeAccepted} onRoomKeyChange={setRoomKey} onNoticeChange={setConnectionNoticeAccepted} onUnlock={unlockVault} onBack={() => setActiveRoom("Listen")} onConnect={beginConnection} />}
 
@@ -308,7 +305,7 @@ function App() {
       </section>
 
       <section className="orbit-player online-orbit" aria-label="Online player controls">
-        <div className="orbit-track"><span className="orbit-cover coral"><i /></span><div><b>{selectedVideo?.title ?? "nothing is selected yet"}</b><small>{selectedVideo ? selectedVideo.channelTitle : "connect your room, then choose something to hear"}</small><span className={`playback-state ${playback}`}>{playbackPrompt(playback)}</span>{playerReady && <span className="player-ready-indicator" role="status">VISIBLE PLAYER READY</span>}</div><button className={savedCount ? "heart-orbit saved" : "heart-orbit"} onClick={toggleSaved} title="Save this once something is playing"><Heart size={17} fill={savedCount ? "currentColor" : "none"} /></button></div>
+        <div className="orbit-track"><span className="orbit-cover coral"><i /></span><div><b>{selectedVideo?.title ?? "nothing is selected yet"}</b><small>{selectedVideo ? selectedVideo.channelTitle : "connect your room, then choose something to hear"}</small><span className={`playback-state ${playback}`}>{playbackPrompt(playback)}</span>{playerReady && <span className="player-ready-indicator" role="status">VISIBLE PLAYER READY</span>}</div><button className="heart-orbit" disabled title="Saved music will arrive only after an official account capability is designed"><Heart size={17} /></button></div>
         <div className="orbit-control-cluster">
           <button className="orbit-small" disabled title="Previous becomes available with a real queue"><SkipBack size={18} fill="currentColor" /></button>
           <div className={`orbit-core ${playback === "playing" ? "playing" : ""}`}><button onClick={toggleVisiblePlayback} title={selectedVideo ? "Play or pause the visible player" : "Choose a result to prepare the visible player"}>{playback === "playing" ? <Pause size={21} fill="currentColor" /> : <Play size={21} fill="currentColor" />}</button></div>
@@ -362,9 +359,9 @@ function PlaylistsRoom({ connection, playlists, playlistState, playlistMessage, 
   </section>;
 }
 
-function SavedRoom({ connection, savedCount, onConnect, onSave }: { connection: OnlineConnectionState; savedCount: number; onConnect: () => void; onSave: () => void }) {
-  return <section className="room-view online-room"><RoomHeader eyebrow="SAVED / KEEP THESE CLOSE" title={<>the ones you<br /><em>mean to return to.</em></>} copy="Saved online music is tied to your connected listening room. Pi-Music will not create a second hidden library." />
-    <div className="saved-counter"><Heart size={23} /><div><span className="micro-label">SAVED THIS SESSION</span><b>{savedCount} {savedCount === 1 ? "little marker" : "little markers"}</b><small>{connection === "connected" ? "A real save action will arrive with account access." : "Connect to make this shelf available."}</small></div><button className="soft-sticker" onClick={connection === "connected" ? onSave : onConnect}>{connection === "connected" ? "keep this" : "connect first"}</button></div>
+function SavedRoom({ connection, onConnect }: { connection: OnlineConnectionState; onConnect: () => void }) {
+  return <section className="room-view online-room"><RoomHeader eyebrow="SAVED / KEEP THESE CLOSE" title={<>the ones you<br /><em>mean to return to.</em></>} copy="Pi-Music will not pretend a temporary counter is a saved collection. This room stays quiet until an officially permitted saved-music capability is ready." />
+    <div className="saved-counter"><Heart size={23} /><div><span className="micro-label">SAVED STATUS</span><b>not available yet</b><small>{connection === "connected" ? "Your connection is ready, but Pi-Music has not asked for a save permission or created a shadow library." : "Connect when you are ready; it still will not create a saved list."}</small></div>{connection !== "connected" && <button className="soft-sticker" onClick={onConnect}>connect first</button>}</div>
   </section>;
 }
 
