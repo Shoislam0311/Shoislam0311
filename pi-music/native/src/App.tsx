@@ -86,6 +86,7 @@ function App() {
   const [openPlaylistTitle, setOpenPlaylistTitle] = useState("");
   const [selectedVideo, setSelectedVideo] = useState<YoutubeVideo | null>(null);
   const [playerController, setPlayerController] = useState<PlayerController | null>(null);
+  const [playerReady, setPlayerReady] = useState(false);
 
   const cleanSearch = useMemo(() => normaliseSearchQuery(searchValue), [searchValue]);
   const connected = connection === "connected";
@@ -227,6 +228,7 @@ function App() {
 
   const chooseVideo = (video: YoutubeVideo) => {
     setSelectedVideo(video);
+    setPlayerReady(false);
     setPlayback("cueing");
     setActiveRoom("Now Playing");
   };
@@ -266,7 +268,7 @@ function App() {
     try { await invoke("disconnect_google"); } catch { /* Preview mode has no native credential store. */ }
     setConnection("not-connected");
     setSearchResults([]); setSearchState("idle"); setPlaylists([]); setPlaylistState("idle");
-    setPlaylistItems([]); setPlaylistItemState("idle"); setOpenPlaylistTitle(""); setSelectedVideo(null); setPlayback("waiting");
+    setPlaylistItems([]); setPlaylistItemState("idle"); setOpenPlaylistTitle(""); setSelectedVideo(null); setPlayerReady(false); setPlayback("waiting");
     setActiveRoom("Settings");
   };
 
@@ -294,7 +296,7 @@ function App() {
 
         {activeRoom === "Listen" && <ListenRoom onConnect={beginConnection} onSearch={openSearch} onCue={askToCue} />}
         {activeRoom === "Search" && <SearchRoom connection={connection} value={searchValue} cleanValue={cleanSearch} searchState={searchState} searchMessage={searchMessage} results={searchResults} onChange={setSearchValue} onConnect={beginConnection} onSearch={runSearch} onSelect={chooseVideo} />}
-        {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onControllerReady={setPlayerController} />}
+        {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} playerReady={playerReady} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onPlayerReady={setPlayerReady} onControllerReady={setPlayerController} />}
         {activeRoom === "Playlists" && <PlaylistsRoom connection={connection} playlists={playlists} playlistState={playlistState} playlistMessage={playlistMessage} openPlaylistTitle={openPlaylistTitle} playlistItems={playlistItems} playlistItemState={playlistItemState} playlistItemMessage={playlistItemMessage} onConnect={beginConnection} onOpenPlaylist={openPlaylist} onSelectVideo={chooseVideo} />}
         {activeRoom === "Saved" && <SavedRoom connection={connection} savedCount={savedCount} onConnect={beginConnection} onSave={toggleSaved} />}
         {activeRoom === "Settings" && <SettingsRoom connection={connection} onConnect={beginConnection} onDisconnect={disconnect} />}
@@ -304,7 +306,7 @@ function App() {
       </section>
 
       <section className="orbit-player online-orbit" aria-label="Online player controls">
-        <div className="orbit-track"><span className="orbit-cover coral"><i /></span><div><b>{selectedVideo?.title ?? "nothing is selected yet"}</b><small>{selectedVideo ? selectedVideo.channelTitle : "connect your room, then choose something to hear"}</small><span className={`playback-state ${playback}`}>{playbackPrompt(playback)}</span></div><button className={savedCount ? "heart-orbit saved" : "heart-orbit"} onClick={toggleSaved} title="Save this once something is playing"><Heart size={17} fill={savedCount ? "currentColor" : "none"} /></button></div>
+        <div className="orbit-track"><span className="orbit-cover coral"><i /></span><div><b>{selectedVideo?.title ?? "nothing is selected yet"}</b><small>{selectedVideo ? selectedVideo.channelTitle : "connect your room, then choose something to hear"}</small><span className={`playback-state ${playback}`}>{playbackPrompt(playback)}</span>{playerReady && <span className="player-ready-indicator" role="status">VISIBLE PLAYER READY</span>}</div><button className={savedCount ? "heart-orbit saved" : "heart-orbit"} onClick={toggleSaved} title="Save this once something is playing"><Heart size={17} fill={savedCount ? "currentColor" : "none"} /></button></div>
         <div className="orbit-control-cluster">
           <button className="orbit-small" disabled title="Previous becomes available with a real queue"><SkipBack size={18} fill="currentColor" /></button>
           <div className={`orbit-core ${playback === "playing" ? "playing" : ""}`}><button onClick={toggleVisiblePlayback} title={selectedVideo ? "Play or pause the visible player" : "Choose a result to prepare the visible player"}>{playback === "playing" ? <Pause size={21} fill="currentColor" /> : <Play size={21} fill="currentColor" />}</button></div>
@@ -343,10 +345,10 @@ function SearchRoom({ connection, value, cleanValue, searchState, searchMessage,
   </section>;
 }
 
-function NowPlayingRoom({ playback, selectedVideo, onConnect, onSearch, onPlaybackState, onControllerReady }: { playback: OnlinePlaybackState; selectedVideo: YoutubeVideo | null; onConnect: () => void; onSearch: () => void; onPlaybackState: (state: OnlinePlaybackState) => void; onControllerReady: (controller: PlayerController | null) => void }) {
+function NowPlayingRoom({ playback, selectedVideo, playerReady, onConnect, onSearch, onPlaybackState, onPlayerReady, onControllerReady }: { playback: OnlinePlaybackState; selectedVideo: YoutubeVideo | null; playerReady: boolean; onConnect: () => void; onSearch: () => void; onPlaybackState: (state: OnlinePlaybackState) => void; onPlayerReady: (ready: boolean) => void; onControllerReady: (controller: PlayerController | null) => void }) {
   const hasSelection = Boolean(selectedVideo);
   return <section className="room-view online-room now-playing-room"><RoomHeader eyebrow="NOW PLAYING / VISIBLE BY DESIGN" title={hasSelection ? <>a record is<br /><em>waiting at the deck.</em></> : <>the turntable is<br /><em>waiting for a record.</em></>} copy="Pi-Music will keep the official player visible here. Until the authorized player is connected, the controls stay honest and the room stays quiet." />
-    <div className="visible-player-shell"><div className="player-glass">{hasSelection && selectedVideo ? <VisibleYoutubePlayer videoId={selectedVideo.videoId} onPlaybackState={onPlaybackState} onControllerReady={onControllerReady} /> : <div className="player-screen"><PiLoop /><b>NO ITEM SELECTED</b><small>{playbackPrompt(playback)}</small><button className="play-sticker" onClick={onConnect}><Wifi size={17} /> connect to begin</button></div>}</div><div className="player-side-note"><span className="micro-label">OFFICIAL PLAYER / VISIBLE BY DESIGN</span><p>{hasSelection ? "The full YouTube player is visible here with its own controls. Pi-Music can cue, play, pause, and reflect its real lifecycle without substituting another audio path." : "Choose a returned search result, then this room will prepare the visible player."}</p><button className="text-link" onClick={onSearch}>go to search <ArrowRight size={16} /></button></div></div>
+    <div className="visible-player-shell"><div className="player-glass">{hasSelection && selectedVideo ? <VisibleYoutubePlayer videoId={selectedVideo.videoId} onPlaybackState={onPlaybackState} onPlayerReady={onPlayerReady} onControllerReady={onControllerReady} /> : <div className="player-screen"><PiLoop /><b>NO ITEM SELECTED</b><small>{playbackPrompt(playback)}</small><button className="play-sticker" onClick={onConnect}><Wifi size={17} /> connect to begin</button></div>}</div><div className="player-side-note"><span className="micro-label">OFFICIAL PLAYER / VISIBLE BY DESIGN</span><p>{hasSelection ? "The full YouTube player is visible here with its own controls. Pi-Music can cue, play, pause, and reflect its real lifecycle without substituting another audio path." : "Choose a returned search result, then this room will prepare the visible player."}</p>{hasSelection && <small className={playerReady ? "player-ready-note ready" : "player-ready-note"}>{playerReady ? "Player ready — press play here or on the receiver below." : "Preparing the visible player…"}</small>}<button className="text-link" onClick={onSearch}>go to search <ArrowRight size={16} /></button></div></div>
   </section>;
 }
 

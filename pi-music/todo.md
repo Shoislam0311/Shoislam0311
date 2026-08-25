@@ -45,8 +45,8 @@
 - [ ] Complete a legal and licensing review for each enabled playback and download source; do not port or execute Spotube plugins directly.
 - [ ] Implement downloads only for sources that expressly permit them, then write verified track tags and user-selected save locations.
 - [ ] Implement a licensed lyric lookup and bind verified timecodes to actual playback progress.
-- [ ] Synchronize the latest native retro UI refinements into the GitHub repository without generated build outputs.
-- [ ] Repair the failed native GitHub Actions workflow by installing required Linux webview development packages, then rerun validation.
+- [x] Synchronize the latest native retro UI refinements into the GitHub repository without generated build outputs.
+- [x] Repair the failed native GitHub Actions workflow by installing required Linux webview development packages, then rerun validation.
 - [ ] Confirm successful Linux, Windows, and macOS build artifacts and install-smoke-test each available package before release consideration.
 - [ ] Create no public release or “streaming app” claim until all applicable functional, legal, and cross-platform validation gates are complete.
 - [ ] Replace the community-extension product direction with a first-party built-in source architecture for Pi-Music.
@@ -113,3 +113,5 @@
 - [x] Add an official visible YouTube IFrame Player bridge that queues selected returned videos, preserves provider controls, maps ready/state/error/autoplay-blocked events, and keeps direct media extraction out of Pi-Music; retain a real installed-app lifecycle test before release consideration.
 - [x] Require a visible, reversible acknowledgement of Pi-Music’s local privacy practice and the linked YouTube terms before opening an account connection; keep this consent separate from the provider’s own browser permission screen.
 - [x] Remove generated Tauri mobile scaffolding from the desktop-only Pi-Music source and exclude regenerated platform artifacts from GitHub synchronization.
+- [x] Verify that GitHub Actions completed source validation and produced non-release Linux, Windows, and macOS desktop build artifacts for the current native source; retain package installation smoke tests before any release consideration.
+- [x] Map the official YouTube IFrame ready event to a listener-visible Pi-Music readiness state, separate from cue/play/pause/end/error/autoplay-blocked states, then reverify the player bridge.

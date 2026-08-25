@@ -29,5 +29,6 @@ describe("online listening state", () => {
     expect(youtubePlayerState(2)).toBe("paused");
     expect(youtubePlayerState(0)).toBe("ended");
     expect(youtubePlayerState(-1)).toBe("waiting");
+    expect(playbackPrompt("ready")).toContain("visible player");
   });
 });

@@ -58,10 +58,12 @@ function loadYoutubeApi() {
 export function VisibleYoutubePlayer({
   videoId,
   onPlaybackState,
+  onPlayerReady,
   onControllerReady,
 }: {
   videoId: string;
   onPlaybackState: (state: OnlinePlaybackState) => void;
+  onPlayerReady: (ready: boolean) => void;
   onControllerReady: (controller: PlayerController | null) => void;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -89,10 +91,12 @@ export function VisibleYoutubePlayer({
             onReady: (event) => {
               if (disposed) return;
               event.target.cueVideoById(videoId);
+              onPlayerReady(true);
+              onPlaybackState("ready");
               onControllerReady({ play: () => event.target.playVideo(), pause: () => event.target.pauseVideo() });
             },
             onStateChange: (event) => onPlaybackState(youtubePlayerState(event.data)),
-            onError: () => onPlaybackState("unavailable"),
+            onError: () => { onPlayerReady(false); onPlaybackState("unavailable"); },
             onAutoplayBlocked: () => onPlaybackState("blocked"),
           },
         });
@@ -100,10 +104,11 @@ export function VisibleYoutubePlayer({
       .catch(() => { if (!disposed) onPlaybackState("unavailable"); });
     return () => {
       disposed = true;
+      onPlayerReady(false);
       onControllerReady(null);
       player?.destroy();
     };
-  }, [onControllerReady, onPlaybackState, videoId]);
+  }, [onControllerReady, onPlaybackState, onPlayerReady, videoId]);
 
   return <div className="youtube-iframe-stage" aria-label="Official YouTube player"><div className="youtube-iframe-host" ref={hostRef} /></div>;
 }

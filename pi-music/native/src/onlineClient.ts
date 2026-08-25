@@ -2,7 +2,7 @@ export type OnlineRoom = "Listen" | "Search" | "Now Playing" | "Playlists" | "Sa
 
 export type OnlineConnectionState = "not-connected" | "needs-consent" | "connected" | "problem";
 
-export type OnlinePlaybackState = "waiting" | "cueing" | "playing" | "paused" | "ended" | "blocked" | "unavailable";
+export type OnlinePlaybackState = "waiting" | "ready" | "cueing" | "playing" | "paused" | "ended" | "blocked" | "unavailable";
 
 export type OnlineCollectionState = "idle" | "loading" | "ready" | "empty" | "problem";
 
@@ -22,6 +22,7 @@ export function searchPrompt(connection: OnlineConnectionState, query: string) {
 export function playbackPrompt(state: OnlinePlaybackState) {
   const copy: Record<OnlinePlaybackState, string> = {
     waiting: "Choose something from your connected listening room to begin.",
+    ready: "The visible player is ready when you are.",
     cueing: "Getting the player ready.",
     playing: "The room is sounding lovely.",
     paused: "Paused right where you left it.",
