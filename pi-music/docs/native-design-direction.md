@@ -1,6 +1,8 @@
 # Pi-Music Native Design Direction
 
-## Creative premise
+> **Historical visual-direction record — superseded in scope.** The handcrafted material and hi-fi craft principles remain useful, but the mobile, local-playback, Spotify, MusicBrainz, and JioSaavn product statements below are not current requirements. The current scope is desktop-only and YouTube-only; see [`native-only-architecture.md`](./native-only-architecture.md).
+
+## Historical creative premise
 
 Pi-Music should feel like a **small music room built with care**, not a generic streaming dashboard. The native desktop and mobile applications will combine the existing editorial listening-desk clarity with a softer, more playful material language: rounded record sleeves, friendly source badges, tiny playback pulses, and surfaces that feel like warm paper rather than flat software panels.
 

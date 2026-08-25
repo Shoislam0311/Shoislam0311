@@ -1,55 +1,37 @@
-# Pi-Music Native-Only Architecture
+# Pi-Music Native Desktop Architecture
 
 ## Product decision
 
-Pi-Music will ship as a **native application only**. Its supported release targets are **Windows, macOS, Linux, Android, and iPhone**. It will not have a public browser, PWA, or hosted web-app release.
+Pi-Music is a **native desktop-only** application for **Linux, Windows, and macOS**. It does not ship a browser/PWA product, Android client, iPhone client, local-audio library, multi-provider source runtime, downloader, or background media resolver. Tauri 2 provides the desktop host, React and TypeScript render the listener interface, and Rust owns capability-sensitive work. [1]
 
-The recommended native shell is **Tauri 2**. Tauri supports Windows, macOS, Linux, Android, and iOS from a single product codebase while allowing TypeScript for the interface and Rust for capability-sensitive application logic.[1] The existing Pi-Music interface remains a visual and interaction reference, but the current browser/PWA workspace is not a product delivery target.
+## Current YouTube-only path
 
-## Release architecture
-
-| Layer | Native implementation | Why it belongs there |
+| Layer | Current role | Boundary |
 | --- | --- | --- |
-| Application shell | Tauri 2 for desktop and mobile | Produces installable operating-system applications without publishing a browser build.[1] |
-| Listening UI | Shared TypeScript interface rendered inside the native application shell | Preserves Pi-Music’s shared listening flow and visual language on wide desktop and narrow phone screens. |
-| Local library, playlists, and preferences | Native application data directory with a local SQLite store | Keeps user state on the device and avoids a cloud profile by default. |
-| Audio playback | Native Rust/mobile audio bridge with platform media-session integration | Allows local playback, background controls, and reliable device-level behavior. |
-| Downloads and tags | Native file-save action plus a local tag-writing service | Gives the user explicit file destinations and metadata writes without a browser download layer. |
-| OAuth tokens | Platform secure credential storage | Keeps user tokens out of the UI bundle and normal local-app preferences. |
-| Plugin runtime | Signed, manifest-first native adapters with explicit capability permissions | Prevents automatic execution of arbitrary remote plugin code. |
+| Desktop shell | Tauri 2 app window and native command host. | No public web delivery and no mobile target. |
+| Listener UI | Original late-1970s hi-fi rooms for Connect, Search, Now Playing, Playlists, Saved, Settings, and Words. | The webview never receives OAuth or refresh tokens. |
+| Protected connection room | Native Stronghold encrypted vault, unlocked with a listener-selected private room key. | The private key is not retained in UI state or source; disconnect clears connection material. |
+| Account authorization | System-browser Google OAuth authorization-code flow with PKCE, loopback callback, randomized state, and host-only token exchange. | The app never requests a Google password. [2] |
+| Discovery and collections | Rust calls official YouTube Data API `search.list`, `playlists.list`, and `playlistItems.list`, returning compact listener-safe records. | Video search is restricted to embeddable and syndicated results. [3] |
+| Playback | Official visible YouTube IFrame Player, created only after a selected returned video ID. | Provider player controls and identity remain visible; Pi-Music never extracts a media URL. [4] |
+| Lyrics | No lyric feed is enabled. | Timed lyrics require a separately licensed provider and real timecodes. |
 
-## Source model
+## Privacy boundary
 
-Pi-Music separates the identity of a recording from the service that can play it.
+Pi-Music has no product telemetry, advertising identifier, background collection queue, cloud listening profile, scraper, downloader, or plugin runtime. The connection room requires a per-session acknowledgement of this local-storage model and links to YouTube Terms and Google Privacy before system-browser sign-in. The listener can disconnect through Settings.
 
-| Responsibility | Default or supported source | Native behavior |
-| --- | --- | --- |
-| Metadata authority | MusicBrainz plus Cover Art Archive | Resolves canonical recording, release, artist, and ISRC-related metadata through a rate-limited native metadata client.[2] |
-| Playback resolver | Reviewed JioSaavn adapter | Remains disabled until the user explicitly enables the adapter and accepts its displayed permissions. |
-| Optional enrichment | Spotify | Uses a user-authorized OAuth connection for compatible library and playlist information, never as Pi-Music’s metadata system of record.[3] |
-| Optional account source | YouTube | Uses user-authorized Google OAuth and provider-compliant embedded/native playback behavior where supported.[4] |
-| Lyrics | Active source-supplied timecodes | Shows synchronized lyrics only when the active source provides timestamps. |
-
-## Native privacy boundary
-
-Pi-Music will have no analytics SDK, advertising identifier, background telemetry queue, or cloud listening-history service. Metadata and playback requests occur only after a user searches, opens, plays, downloads, or enables a source. A source manifest must expose its network, library, download, and account capabilities before it can be activated.
-
-OAuth connection state belongs in secure storage and must be easy to disconnect. The application will not store provider passwords; login takes place on the provider’s own consent surface. Spotify and YouTube client IDs can be configured for the application, but user access and refresh tokens must never be embedded in a frontend bundle or repository.[3] [4]
+> **Evidence boundary:** Automated vault persistence, user-approved temporary OAuth exchange, count-only YouTube data checks, frontend tests, and non-release desktop CI artifacts are verified. Installed-app connection retention, forced refresh, disconnect/reconnect, visible playback events, package installation, and cross-platform connected-account checks remain open.
 
 ## Delivery constraints
 
-Native builds require platform toolchains. In particular, iPhone builds and distribution require Xcode on macOS, while each desktop operating system needs its respective native build environment.[5] The Pi-Music source should be developed in a bound native-project folder so desktop artifacts can be created and tested there.
-
-The immediate implementation sequence is to create a Tauri workspace, migrate the Pi-Music design system into the shared native interface, implement the local SQLite and secure-storage services, then add source adapters behind capability prompts. The browser/PWA assets in the current repository are retained only as migration reference until the dedicated native project is initialized.
+Desktop artifacts are built in non-release GitHub Actions jobs for Linux, Windows, and macOS. No tag or public release is authorized until the functional gates in [`functional-release-gates.md`](./functional-release-gates.md) are completed and each package has an installation/core-flow smoke record.
 
 ## References
 
-[1]: [Tauri 2: Cross-platform applications](https://v2.tauri.app/)
+[1]: [Tauri 2 documentation](https://v2.tauri.app/)
 
-[2]: [MusicBrainz API](https://musicbrainz.org/doc/MusicBrainz_API)
+[2]: [Google OAuth 2.0 for installed applications](https://developers.google.com/identity/protocols/oauth2/native-app)
 
-[3]: [Spotify: Authorization Code with PKCE Flow](https://developer.spotify.com/documentation/web-api/tutorials/code-pkce-flow)
+[3]: [YouTube Data API reference](https://developers.google.com/youtube/v3/docs)
 
-[4]: [Google: Obtaining authorization credentials for YouTube Data API](https://developers.google.com/youtube/registering_an_application)
-
-[5]: [Tauri: Prerequisites](https://v2.tauri.app/start/prerequisites/)
+[4]: [YouTube IFrame Player API Reference](https://developers.google.com/youtube/iframe_api_reference)

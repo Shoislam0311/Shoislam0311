@@ -1,5 +1,7 @@
 # Comparable Music Client Research
 
+> **Historical comparative research — not a current feature specification.** This matrix records what other clients publicly documented and the constraints Pi-Music chose not to adopt. Pi-Music’s current product scope is desktop-only and YouTube-only; see [`native-only-architecture.md`](./native-only-architecture.md) and [`functional-release-gates.md`](./functional-release-gates.md).
+
 ## Scope and method
 
 This is a read-only product and architecture comparison. It reviews public documentation and repositories only; no third-party code, extractors, plugins, installers, or binaries are executed. Pi-Music will use the findings to define original product requirements, not to copy a client or bypass a provider.

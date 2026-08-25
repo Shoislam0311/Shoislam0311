@@ -33,7 +33,7 @@
 - [x] Compare Pi-Music’s current desktop capabilities with Spotube or a similar mature open-source music client before creating any release.
 - [x] Verify and document exactly which local and remote playback paths can stream music in the current Pi-Music build.
 - [x] Record that the earlier browser/PWA implementation claims are historical prototype work only and do not represent the native desktop product’s current capabilities.
-- [ ] Update all native product and OAuth documentation to state Linux, Windows, and macOS only; defer Android and iPhone support.
+- [ ] Update the current native product, README, OAuth, and release-gate documentation to state Linux, Windows, and macOS only; retain superseded mobile/provider material only as explicitly labeled historical research.
 - [x] Add a native persistent library model for user-selected local files, without background directory scanning or telemetry.
 - [ ] Add native durable playlist, saved-track, recently-played, and queue persistence with explicit user-controlled import paths.
 - [x] Bind the player to real audio lifecycle states: loading, duration, progress, seeking, ended, errors, and unsupported-format feedback.
@@ -115,3 +115,4 @@
 - [x] Remove generated Tauri mobile scaffolding from the desktop-only Pi-Music source and exclude regenerated platform artifacts from GitHub synchronization.
 - [x] Verify that GitHub Actions completed source validation and produced non-release Linux, Windows, and macOS desktop build artifacts for the current native source; retain package installation smoke tests before any release consideration.
 - [x] Map the official YouTube IFrame ready event to a listener-visible Pi-Music readiness state, separate from cue/play/pause/end/error/autoplay-blocked states, then reverify the player bridge.
+- [ ] Audit all remaining Pi-Music documentation for superseded Android/iPhone/Spotify/JioSaavn/local-file product language and either update it to the desktop-only YouTube scope or label it explicitly as historical research.

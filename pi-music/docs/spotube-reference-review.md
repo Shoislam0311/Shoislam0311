@@ -1,5 +1,7 @@
 # Spotube Reference Review for Pi-Music
 
+> **Historical research record — superseded in product scope.** This review remains the evidence for not copying or porting Spotube and for excluding extractors, stream resolution, downloaders, and plugin runtimes. Its earlier local-library and multi-provider implementation suggestions are not current Pi-Music requirements. See [`native-only-architecture.md`](./native-only-architecture.md).
+
 ## Review scope
 
 This review inspected a shallow, read-only clone of Spotube at commit `69a310c`. No Spotube code, scripts, builds, provider modules, extractors, or downloaded executables were run. The purpose is to understand product structure and release maturity—not to transplant its implementation into Pi-Music.

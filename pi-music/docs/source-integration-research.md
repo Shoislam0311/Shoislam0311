@@ -1,6 +1,8 @@
 # Pi-Music Source Integration Research
 
-## User-specified JioSaavn playback plugin
+> **Historical research record — superseded in product scope.** This document preserves the early source and license review. Pi-Music’s current product path is desktop-only and YouTube-only, with no local library, Spotify, JioSaavn, metadata-enrichment, or plugin runtime. See [`native-only-architecture.md`](./native-only-architecture.md).
+
+## Historical JioSaavn playback-plugin review
 
 The referenced repository describes itself as a **JioSaavn audio source plugin for Spotube**. Its manifest identifies `JiosaavnAudioSourcePlugin` as the entry point, requests local-storage access, declares the `audio-source` ability, and targets **Spotube plugin API version 2.0.0**.[1] The project is a Spotube-native plugin, not a browser package or Pi-Music-compatible API. Pi-Music must therefore model it as an explicitly enabled external playback resolver and cannot load or execute its entry point directly in the browser without a separately reviewed, compatible adapter.
 

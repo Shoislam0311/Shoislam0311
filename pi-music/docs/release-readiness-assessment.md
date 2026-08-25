@@ -1,6 +1,8 @@
 # Pi-Music Desktop Release-Readiness Assessment
 
-## Executive conclusion
+> **Historical record — superseded.** This assessment describes Pi-Music before the user selected the current desktop-only, YouTube-only product direction. It is retained for provenance and must not be used to describe the current build. The authoritative status is [`functional-release-gates.md`](./functional-release-gates.md).
+
+## Historical executive conclusion
 
 **Pi-Music is not yet at the functional standard of Spotube and must not be presented as a finished streaming client or released as one.** The current native desktop app has a distinctive, polished listening interface, explicit user-selected local-file playback, a native Tauri shell, and cross-platform GitHub Actions workflows. It does **not** yet implement a working remote audio-source plugin runtime, authenticated Spotify/YouTube account flow, remote-stream resolution, downloads with final tags, durable playlists, or true time-synchronized lyrics.
 

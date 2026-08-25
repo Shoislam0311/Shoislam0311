@@ -2,7 +2,7 @@
 
 ## Product decision
 
-Pi-Music will use **built-in, first-party listening rooms** rather than a runtime marketplace or executable third-party extensions. A listener will choose a familiar listening path in the app; Pi-Music will own the visual experience, permissions, local library, error handling, and playback state. No unreviewed source code will run inside the desktop application.
+Pi-Music uses a **built-in, first-party online listening room** rather than a runtime marketplace or executable third-party extensions. Pi-Music owns the visual experience, permission prompts, error handling, and playback state. No unreviewed source code will run inside the desktop application.
 
 Pi-Music’s only planned remote listening path is **YouTube**. The application will use YouTube’s official discovery and account interfaces where authorized and a visible official embedded player for remote playback. It will not use a stream extractor, a downloader, an audio-only workaround, a hidden source switch, or any unsupported “YouTube Music” interface.
 
@@ -10,10 +10,7 @@ Pi-Music’s only planned remote listening path is **YouTube**. The application 
 
 | Listening room | Information shown | Sound played | Release status |
 | --- | --- | --- | --- |
-| **Local shelf** | File names and optional open-record enrichment | Explicitly selected local files | Implemented foundation; persistence and playback controls in progress |
 | **YouTube room** | YouTube-supplied video, title, channel, and playlist context | Official visible YouTube embedded player | Production requirements recorded; consent and native proof remain |
-| **JioSaavn room** | No public route at present | None | Blocked pending an executed partner agreement |
-| **Open record notes** | MusicBrainz and Cover Art Archive enrichment where permitted | No remote audio on its own | Approved optional local-library enrichment |
 
 ## YouTube-only implementation boundary
 
@@ -21,7 +18,7 @@ Pi-Music will use the YouTube Data API only for functions authorized by a user o
 
 Remote playback must stay in the official IFrame Player surface. The player will be visible, recognizably YouTube, and large enough for its controls. Pi-Music will not cover YouTube controls, modify returned YouTube search results, or disguise YouTube actions as a local Pi-Music action.[3] [4]
 
-JioSaavn is not a fallback. Its current public API policy restricts access to JioSaavn and licensed affiliates and prohibits the third-party interactive streaming path Pi-Music would need.[5] Pi-Music will leave that room unavailable unless an executed partner agreement changes the position.
+JioSaavn is outside Pi-Music’s product path. Its current public API policy also restricts access to JioSaavn and licensed affiliates and prohibits the third-party interactive streaming path Pi-Music would need.[5]
 
 ## Non-negotiable release gates
 
@@ -31,7 +28,6 @@ JioSaavn is not a fallback. Its current public API policy restricts access to Ji
 | YouTube discovery | Policy-compliant video and playlist search, source-preserving result presentation, clear availability and error states. |
 | YouTube playback | A visible embedded-player proof in Tauri, intact YouTube controls/identity, and tested play/pause/seek/error behaviour. |
 | YouTube policy surfaces | Terms and privacy consent, YouTube terms link, Google privacy link, and transparent explanation of local/token data handling. |
-| Local listening | Persistent selected-file library, little mixes, queue, progress/error state, media controls, and installation checks. |
 | User safety | No credentials in source code, no extracted streams, no download workarounds, no hidden source switching, and no Pi-Music telemetry. |
 
 ## Visual direction
