@@ -117,4 +117,5 @@
 - [x] Map the official YouTube IFrame ready event to a listener-visible Pi-Music readiness state, separate from cue/play/pause/end/error/autoplay-blocked states, then reverify the player bridge.
 - [x] Map official YouTube player error codes to listener-safe unavailable messages so selected videos explain when playback cannot begin without exposing provider internals.
 - [x] Remove the non-persistent Saved-room counter and present an honest disabled state until an officially permitted saved/favorites capability is designed and authorized.
+- [x] Translate host-side YouTube discovery and playlist failures into listener-safe recovery copy so raw provider, network, or implementation text never appears in Pi-Music rooms.
 - [ ] Audit all remaining Pi-Music documentation for superseded Android/iPhone/Spotify/JioSaavn/local-file product language and either update it to the desktop-only YouTube scope or label it explicitly as historical research.

@@ -67,3 +67,12 @@ export function youtubePlayerErrorMessage(errorCode: number) {
   if (errorCode === 5) return "This video cannot open in the visible player right now. Try another returned record.";
   return "This item cannot be played in Pi-Music right now. Choose another returned record.";
 }
+
+export function listenerRecoveryMessage(error: unknown, subject: string) {
+  const detail = error instanceof Error ? error.message.toLowerCase() : "";
+  if (detail.includes("401") || detail.includes("unauthorized")) return "Your connected room needs to be opened again before Pi-Music can continue.";
+  if (detail.includes("403") || detail.includes("forbidden")) return `This ${subject} is not available in your room right now.`;
+  if (detail.includes("429") || detail.includes("quota") || detail.includes("rate")) return "Your room needs a quiet moment before trying again.";
+  if (detail.includes("404") || detail.includes("not found")) return `That ${subject} is no longer available. Choose another one.`;
+  return `Pi-Music could not bring in this ${subject} right now. Try again in a moment.`;
+}

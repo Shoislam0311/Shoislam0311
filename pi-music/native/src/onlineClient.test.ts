@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canPlayOnline, collectionPrompt, collectionState, normaliseSearchQuery, playbackPrompt, searchPrompt, youtubePlayerErrorMessage, youtubePlayerState } from "./onlineClient";
+import { canPlayOnline, collectionPrompt, collectionState, listenerRecoveryMessage, normaliseSearchQuery, playbackPrompt, searchPrompt, youtubePlayerErrorMessage, youtubePlayerState } from "./onlineClient";
 
 describe("online listening state", () => {
   it("normalises a search without changing the listener’s words", () => {
@@ -21,6 +21,9 @@ describe("online listening state", () => {
     expect(collectionState(0)).toBe("empty");
     expect(collectionPrompt("loading", "results")).toContain("Looking");
     expect(collectionPrompt("problem", "playlists")).not.toContain("API");
+    expect(listenerRecoveryMessage(new Error("401 unauthorized"), "search")).toContain("opened again");
+    expect(listenerRecoveryMessage(new Error("429 quota"), "playlist")).toContain("quiet moment");
+    expect(listenerRecoveryMessage(new Error("403 forbidden"), "search")).not.toContain("403");
   });
 
   it("maps official player lifecycle codes without treating an unknown player state as playback", () => {

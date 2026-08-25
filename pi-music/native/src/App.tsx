@@ -21,6 +21,7 @@ import {
   ONLINE_ROOMS,
   canPlayOnline,
   collectionState,
+  listenerRecoveryMessage,
   normaliseSearchQuery,
   playbackPrompt,
   searchPrompt,
@@ -140,7 +141,7 @@ function App() {
       .catch((error) => {
         if (!alive) return;
         setPlaylistState("problem");
-        setPlaylistMessage(error instanceof Error ? error.message : "Pi-Music could not bring in your playlists right now.");
+        setPlaylistMessage(listenerRecoveryMessage(error, "playlist shelf"));
       });
     return () => { alive = false; };
   }, [activeRoom, clientId, connected]);
@@ -207,7 +208,7 @@ function App() {
       setSearchState(collectionState(result.length));
     } catch (error) {
       setSearchState("problem");
-      setSearchMessage(error instanceof Error ? error.message : "Pi-Music could not look for that right now.");
+      setSearchMessage(listenerRecoveryMessage(error, "search"));
     }
   };
 
@@ -222,7 +223,7 @@ function App() {
       setPlaylistItemState(collectionState(result.length));
     } catch (error) {
       setPlaylistItemState("problem");
-      setPlaylistItemMessage(error instanceof Error ? error.message : "Pi-Music could not open that playlist right now.");
+      setPlaylistItemMessage(listenerRecoveryMessage(error, "playlist"));
     }
   };
 
