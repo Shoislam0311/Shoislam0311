@@ -87,6 +87,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState<YoutubeVideo | null>(null);
   const [playerController, setPlayerController] = useState<PlayerController | null>(null);
   const [playerReady, setPlayerReady] = useState(false);
+  const [playerError, setPlayerError] = useState("");
 
   const cleanSearch = useMemo(() => normaliseSearchQuery(searchValue), [searchValue]);
   const connected = connection === "connected";
@@ -229,6 +230,7 @@ function App() {
   const chooseVideo = (video: YoutubeVideo) => {
     setSelectedVideo(video);
     setPlayerReady(false);
+    setPlayerError("");
     setPlayback("cueing");
     setActiveRoom("Now Playing");
   };
@@ -268,7 +270,7 @@ function App() {
     try { await invoke("disconnect_google"); } catch { /* Preview mode has no native credential store. */ }
     setConnection("not-connected");
     setSearchResults([]); setSearchState("idle"); setPlaylists([]); setPlaylistState("idle");
-    setPlaylistItems([]); setPlaylistItemState("idle"); setOpenPlaylistTitle(""); setSelectedVideo(null); setPlayerReady(false); setPlayback("waiting");
+    setPlaylistItems([]); setPlaylistItemState("idle"); setOpenPlaylistTitle(""); setSelectedVideo(null); setPlayerReady(false); setPlayerError(""); setPlayback("waiting");
     setActiveRoom("Settings");
   };
 
@@ -296,7 +298,7 @@ function App() {
 
         {activeRoom === "Listen" && <ListenRoom onConnect={beginConnection} onSearch={openSearch} onCue={askToCue} />}
         {activeRoom === "Search" && <SearchRoom connection={connection} value={searchValue} cleanValue={cleanSearch} searchState={searchState} searchMessage={searchMessage} results={searchResults} onChange={setSearchValue} onConnect={beginConnection} onSearch={runSearch} onSelect={chooseVideo} />}
-        {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} playerReady={playerReady} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onPlayerReady={setPlayerReady} onControllerReady={setPlayerController} />}
+        {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} playerReady={playerReady} playerError={playerError} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onPlayerReady={setPlayerReady} onPlayerError={setPlayerError} onControllerReady={setPlayerController} />}
         {activeRoom === "Playlists" && <PlaylistsRoom connection={connection} playlists={playlists} playlistState={playlistState} playlistMessage={playlistMessage} openPlaylistTitle={openPlaylistTitle} playlistItems={playlistItems} playlistItemState={playlistItemState} playlistItemMessage={playlistItemMessage} onConnect={beginConnection} onOpenPlaylist={openPlaylist} onSelectVideo={chooseVideo} />}
         {activeRoom === "Saved" && <SavedRoom connection={connection} savedCount={savedCount} onConnect={beginConnection} onSave={toggleSaved} />}
         {activeRoom === "Settings" && <SettingsRoom connection={connection} onConnect={beginConnection} onDisconnect={disconnect} />}
@@ -345,10 +347,10 @@ function SearchRoom({ connection, value, cleanValue, searchState, searchMessage,
   </section>;
 }
 
-function NowPlayingRoom({ playback, selectedVideo, playerReady, onConnect, onSearch, onPlaybackState, onPlayerReady, onControllerReady }: { playback: OnlinePlaybackState; selectedVideo: YoutubeVideo | null; playerReady: boolean; onConnect: () => void; onSearch: () => void; onPlaybackState: (state: OnlinePlaybackState) => void; onPlayerReady: (ready: boolean) => void; onControllerReady: (controller: PlayerController | null) => void }) {
+function NowPlayingRoom({ playback, selectedVideo, playerReady, playerError, onConnect, onSearch, onPlaybackState, onPlayerReady, onPlayerError, onControllerReady }: { playback: OnlinePlaybackState; selectedVideo: YoutubeVideo | null; playerReady: boolean; playerError: string; onConnect: () => void; onSearch: () => void; onPlaybackState: (state: OnlinePlaybackState) => void; onPlayerReady: (ready: boolean) => void; onPlayerError: (message: string) => void; onControllerReady: (controller: PlayerController | null) => void }) {
   const hasSelection = Boolean(selectedVideo);
   return <section className="room-view online-room now-playing-room"><RoomHeader eyebrow="NOW PLAYING / VISIBLE BY DESIGN" title={hasSelection ? <>a record is<br /><em>waiting at the deck.</em></> : <>the turntable is<br /><em>waiting for a record.</em></>} copy="Pi-Music will keep the official player visible here. Until the authorized player is connected, the controls stay honest and the room stays quiet." />
-    <div className="visible-player-shell"><div className="player-glass">{hasSelection && selectedVideo ? <VisibleYoutubePlayer videoId={selectedVideo.videoId} onPlaybackState={onPlaybackState} onPlayerReady={onPlayerReady} onControllerReady={onControllerReady} /> : <div className="player-screen"><PiLoop /><b>NO ITEM SELECTED</b><small>{playbackPrompt(playback)}</small><button className="play-sticker" onClick={onConnect}><Wifi size={17} /> connect to begin</button></div>}</div><div className="player-side-note"><span className="micro-label">OFFICIAL PLAYER / VISIBLE BY DESIGN</span><p>{hasSelection ? "The full YouTube player is visible here with its own controls. Pi-Music can cue, play, pause, and reflect its real lifecycle without substituting another audio path." : "Choose a returned search result, then this room will prepare the visible player."}</p>{hasSelection && <small className={playerReady ? "player-ready-note ready" : "player-ready-note"}>{playerReady ? "Player ready — press play here or on the receiver below." : "Preparing the visible player…"}</small>}<button className="text-link" onClick={onSearch}>go to search <ArrowRight size={16} /></button></div></div>
+    <div className="visible-player-shell"><div className="player-glass">{hasSelection && selectedVideo ? <VisibleYoutubePlayer videoId={selectedVideo.videoId} onPlaybackState={onPlaybackState} onPlayerReady={onPlayerReady} onPlayerError={onPlayerError} onControllerReady={onControllerReady} /> : <div className="player-screen"><PiLoop /><b>NO ITEM SELECTED</b><small>{playbackPrompt(playback)}</small><button className="play-sticker" onClick={onConnect}><Wifi size={17} /> connect to begin</button></div>}</div><div className="player-side-note"><span className="micro-label">OFFICIAL PLAYER / VISIBLE BY DESIGN</span><p>{hasSelection ? "The full YouTube player is visible here with its own controls. Pi-Music can cue, play, pause, and reflect its real lifecycle without substituting another audio path." : "Choose a returned search result, then this room will prepare the visible player."}</p>{hasSelection && <small className={playerReady ? "player-ready-note ready" : "player-ready-note"}>{playerReady ? "Player ready — press play here or on the receiver below." : playback === "unavailable" ? playerError || playbackPrompt(playback) : "Preparing the visible player…"}</small>}<button className="text-link" onClick={onSearch}>go to search <ArrowRight size={16} /></button></div></div>
   </section>;
 }
 

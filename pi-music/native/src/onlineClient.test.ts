@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canPlayOnline, collectionPrompt, collectionState, normaliseSearchQuery, playbackPrompt, searchPrompt, youtubePlayerState } from "./onlineClient";
+import { canPlayOnline, collectionPrompt, collectionState, normaliseSearchQuery, playbackPrompt, searchPrompt, youtubePlayerErrorMessage, youtubePlayerState } from "./onlineClient";
 
 describe("online listening state", () => {
   it("normalises a search without changing the listener’s words", () => {
@@ -30,5 +30,8 @@ describe("online listening state", () => {
     expect(youtubePlayerState(0)).toBe("ended");
     expect(youtubePlayerState(-1)).toBe("waiting");
     expect(playbackPrompt("ready")).toContain("visible player");
+    expect(youtubePlayerErrorMessage(100)).toContain("no longer available");
+    expect(youtubePlayerErrorMessage(101)).toContain("cannot be shown");
+    expect(youtubePlayerErrorMessage(5)).toContain("visible player");
   });
 });

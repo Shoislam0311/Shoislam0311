@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { type OnlinePlaybackState, youtubePlayerState } from "./onlineClient";
+import { type OnlinePlaybackState, youtubePlayerErrorMessage, youtubePlayerState } from "./onlineClient";
 
 type PlayerController = { play: () => void; pause: () => void };
 type PlayerInstance = {
@@ -18,7 +18,7 @@ type YoutubeNamespace = {
     events: {
       onReady: (event: { target: PlayerInstance }) => void;
       onStateChange: (event: { data: number }) => void;
-      onError: () => void;
+      onError: (event: { data: number }) => void;
       onAutoplayBlocked: () => void;
     };
   }) => PlayerInstance;
@@ -59,11 +59,13 @@ export function VisibleYoutubePlayer({
   videoId,
   onPlaybackState,
   onPlayerReady,
+  onPlayerError,
   onControllerReady,
 }: {
   videoId: string;
   onPlaybackState: (state: OnlinePlaybackState) => void;
   onPlayerReady: (ready: boolean) => void;
+  onPlayerError: (message: string) => void;
   onControllerReady: (controller: PlayerController | null) => void;
 }) {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -96,19 +98,19 @@ export function VisibleYoutubePlayer({
               onControllerReady({ play: () => event.target.playVideo(), pause: () => event.target.pauseVideo() });
             },
             onStateChange: (event) => onPlaybackState(youtubePlayerState(event.data)),
-            onError: () => { onPlayerReady(false); onPlaybackState("unavailable"); },
+            onError: (event) => { onPlayerReady(false); onPlayerError(youtubePlayerErrorMessage(event.data)); onPlaybackState("unavailable"); },
             onAutoplayBlocked: () => onPlaybackState("blocked"),
           },
         });
       })
-      .catch(() => { if (!disposed) onPlaybackState("unavailable"); });
+      .catch(() => { if (!disposed) { onPlayerError("The visible player could not open right now. Try another returned record."); onPlaybackState("unavailable"); } });
     return () => {
       disposed = true;
       onPlayerReady(false);
       onControllerReady(null);
       player?.destroy();
     };
-  }, [onControllerReady, onPlaybackState, onPlayerReady, videoId]);
+  }, [onControllerReady, onPlaybackState, onPlayerError, onPlayerReady, videoId]);
 
   return <div className="youtube-iframe-stage" aria-label="Official YouTube player"><div className="youtube-iframe-host" ref={hostRef} /></div>;
 }

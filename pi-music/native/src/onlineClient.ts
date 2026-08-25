@@ -59,3 +59,11 @@ export function youtubePlayerState(stateCode: number): OnlinePlaybackState {
   if (stateCode === 3 || stateCode === 5) return "cueing";
   return "waiting";
 }
+
+export function youtubePlayerErrorMessage(errorCode: number) {
+  if (errorCode === 100) return "This video is no longer available. Choose another returned record.";
+  if (errorCode === 101 || errorCode === 150) return "This video cannot be shown inside Pi-Music. Choose another returned record.";
+  if (errorCode === 2) return "This selected record could not be prepared. Choose another returned record.";
+  if (errorCode === 5) return "This video cannot open in the visible player right now. Try another returned record.";
+  return "This item cannot be played in Pi-Music right now. Choose another returned record.";
+}
