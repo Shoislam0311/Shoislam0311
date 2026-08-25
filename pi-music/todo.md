@@ -1,0 +1,115 @@
+# Pi-Music Implementation Checklist
+
+- [x] Build the listening-desk application shell with distinctive, non-generic navigation and playback hierarchy.
+- [x] Apply the Studio Field Notes type, color, motion, and material system consistently across desktop and mobile.
+- [x] Implement local playback state, browsing, playlists, source-plugin registration, and time-synced lyrics.
+- [x] Add tagged local downloads and clearly explain local-first privacy behavior in the product UI.
+- [x] Validate visual craft, keyboard access, desktop/mobile responsiveness, and absence of telemetry.
+- [x] Review the proposed JioSaavn playback plugin and the current Spotify and YouTube authorization documentation without running third-party code.
+- [x] Prepare secure, user-authorized Spotify and YouTube connection states and document the OAuth credentials required to activate live login.
+- [x] Superseded by provider review: model MusicBrainz as the default metadata authority and the reviewed JioSaavn adapter as the explicit playback resolver with clear provenance in the UI.
+- [x] Replace the initial listening desk with a substantially richer source-aware product interface for desktop and mobile.
+- [x] Verify the updated experience, document integration prerequisites, and keep account information private.
+- [x] Compare privacy-conscious music metadata providers and select MusicBrainz plus Cover Art Archive as the default metadata route.
+- [x] Review Spotube’s Spotify metadata plugin as a compatibility reference and document a compliant adapter boundary without bypassing provider controls.
+- [ ] Implement live Spotify and YouTube OAuth callback flows after the two approved client IDs have been added.
+- [ ] Replace the browser/PWA delivery path with a native-only Android, iPhone, Windows, macOS, and Linux architecture.
+- [ ] Rebuild Pi-Music’s source-aware listening interface and local playback features for native desktop and mobile targets.
+- [x] Update product and release documentation to state that Pi-Music has no browser or web release.
+- [x] Apply a cute, tactile, aesthetically cohesive native design system with friendly micro-interactions while keeping playback controls accessible and clear.
+- [x] Replace the current dashboard-like UI elements with an original native component system for the listening desk, player, library, source room, lyrics, and mobile navigation.
+- [x] Implement native Library and Source Room views and wire the Listening Islands to real destination flows.
+- [x] Verify the redesigned native navigation and Orbit Player at a narrow mobile viewport after those destination flows are implemented.
+- [x] Exercise Listen, Library, Patch Bay, and Saved at phone width with the compact Orbit Player present.
+- [ ] Reconfigure Pi-Music’s current release scope for Linux, Windows, and macOS only, deferring Android and iPhone packaging.
+- [ ] Implement desktop Spotify and YouTube PKCE connection flows using the approved desktop client IDs and explicit user consent.
+- [ ] Update the native documentation and provider interface to remove the immediate mobile credential requirement.
+- [ ] Complete Pi-Music as a cohesive native desktop application rather than a UI-only prototype, including the remaining local media and provider workflows.
+- [ ] Add GitHub Actions builds for Linux, Windows, and macOS native release artifacts.
+- [ ] Produce a current polished UI example of the completed desktop listening experience for review.
+- [ ] Apply a refined late-1970s hi-fi listening-room design system with warm materials, analogue controls, tactile audio hardware cues, and accessible modern interactions.
+- [ ] Replace remaining modern navigation and playback glyphs with original retro receiver, turntable, cassette, tuner, and record-sleeve motifs.
+- [ ] Remove API, provider-route, adapter, and other implementation-facing language from all listener-facing Pi-Music screens.
+- [x] Compare Pi-Music’s current desktop capabilities with Spotube or a similar mature open-source music client before creating any release.
+- [x] Verify and document exactly which local and remote playback paths can stream music in the current Pi-Music build.
+- [x] Record that the earlier browser/PWA implementation claims are historical prototype work only and do not represent the native desktop product’s current capabilities.
+- [ ] Update all native product and OAuth documentation to state Linux, Windows, and macOS only; defer Android and iPhone support.
+- [x] Add a native persistent library model for user-selected local files, without background directory scanning or telemetry.
+- [ ] Add native durable playlist, saved-track, recently-played, and queue persistence with explicit user-controlled import paths.
+- [x] Bind the player to real audio lifecycle states: loading, duration, progress, seeking, ended, errors, and unsupported-format feedback.
+- [ ] Add desktop media-session and keyboard playback controls with a tested fallback when platform capabilities are unavailable.
+- [ ] Implement a permissioned, reviewed source-manifest model before enabling any community source runtime.
+- [ ] Implement one compliant remote playback resolver and test an authorized track end to end before using the word “streaming” in product claims.
+- [ ] Implement desktop Spotify and YouTube PKCE consent callbacks, CSRF state validation, secure native token storage, disconnect, and account-error states.
+- [ ] Implement a rate-limited MusicBrainz and Cover Art Archive metadata client with local cache, attribution, and offline/error behavior.
+- [ ] Complete a legal and licensing review for each enabled playback and download source; do not port or execute Spotube plugins directly.
+- [ ] Implement downloads only for sources that expressly permit them, then write verified track tags and user-selected save locations.
+- [ ] Implement a licensed lyric lookup and bind verified timecodes to actual playback progress.
+- [ ] Synchronize the latest native retro UI refinements into the GitHub repository without generated build outputs.
+- [ ] Repair the failed native GitHub Actions workflow by installing required Linux webview development packages, then rerun validation.
+- [ ] Confirm successful Linux, Windows, and macOS build artifacts and install-smoke-test each available package before release consideration.
+- [ ] Create no public release or “streaming app” claim until all applicable functional, legal, and cross-platform validation gates are complete.
+- [ ] Replace the community-extension product direction with a first-party built-in source architecture for Pi-Music.
+- [ ] Define a Spotify catalogue layer for user-authorized search, library, album, artist, and playlist information without embedding credentials or bypassing service controls.
+- [ ] Define a user-visible first-party playback choice between compliant JioSaavn and YouTube Music routes, including availability, consent, error, and fallback behavior.
+- [ ] Verify that any JioSaavn or YouTube Music playback implementation is permitted by applicable terms, licensing, and official technical interfaces before enabling it.
+- [x] Determine that the currently published JioSaavn API policy does not authorize Pi-Music’s planned third-party desktop streaming integration; keep the JioSaavn room unavailable unless a partner agreement is obtained.
+- [ ] Do not copy, port, execute, or represent a Spotube plugin as Pi-Music’s built-in playback implementation.
+- [ ] Redesign Pi-Music’s desktop visual system and interaction details to exceed Spotube’s UI craft through original retro hi-fi components, without duplicating Spotube branding or layouts.
+- [ ] Clone Spotube only for read-only architecture and license review; do not execute downloaded source, copy provider workarounds, or modify the upstream repository.
+- [ ] Record the Spotube license obligations and identify any boundaries that prevent direct code reuse in Pi-Music’s intended distribution model.
+- [x] Produce a feature and subsystem map showing which Pi-Music components should be built independently rather than copied from Spotube.
+- [x] Clone Spotube read-only and review its BSD-4-Clause licensing, top-level structure, documented features, and direct-stream source-match architecture without executing its code.
+- [x] Decide not to fork or port Spotube: retain Pi-Music’s original Tauri desktop stack and treat all Spotube extraction, stream-resolution, downloader, and plugin code as out of scope.
+- [ ] Finish the on-device listening flow with durable little mixes, a real listening line, and platform media controls before starting remote services.
+- [ ] Deliver a visible lyric experience only when lyrics and timecodes are legitimately available and bound to actual playback progress.
+- [ ] Keep every listener-facing state—loading, unavailable, permission needed, playback failure, and empty shelf—clear, warm, and free of implementation jargon.
+- [ ] Perform a deliberate visual-polish pass across all desktop rooms, including keyboard focus, motion, density, typography, and retro control details.
+- [ ] Maintain an evidence log for every future claim that Pi-Music has a Spotube-comparable feature, rather than relying on design mockups or labels.
+- [ ] Treat YouTube as Pi-Music’s first remote listening path, using only the official visible embedded player and official discovery/account interfaces.
+- [ ] Do not market the YouTube-first room as YouTube Music platform playback unless Google provides an applicable authorized interface.
+- [ ] Add Spotify catalogue, song, album, artist, and playlist features only through user-authorized Spotify access with required attribution and links; never pair Spotify display information with third-party audio invisibly.
+- [ ] Keep JioSaavn playback unavailable in all production builds unless an executed partner agreement grants Pi-Music the required access rights.
+- [x] Remove Spotify from Pi-Music’s intended catalogue, playlist, account, and playback architecture at the user’s direction.
+- [ ] Remove Spotify-specific configuration guidance, product copy, and unused source code once the YouTube-only migration is implemented and verified.
+- [ ] Deliver YouTube-authorized discovery, saved playlists, visible embedded playback, and source-preserving sharing as Pi-Music’s sole remote listening path.
+- [ ] Build a complete local-first listener flow: search, library filters, saved tapes, editable little mixes, queue order, recent plays, and desktop shortcuts.
+- [ ] Support download or offline storage only for content Pi-Music is expressly authorized to store; never derive a YouTube download from the embedded player.
+- [ ] Write a release evidence record for each mature-client capability, separating implemented local features from pending remote and lyric integrations.
+- [x] Change Pi-Music from a local-first player to an online music-streaming client only, at the user’s direction.
+- [ ] Remove local-file import, on-device tape, local queue, and local little-mix product flows from the native Pi-Music interface and documentation.
+- [ ] Replace local-library messaging with online search, online playlists, account connection, and streaming availability states.
+- [ ] Make licensed synchronized lyrics a core online-playback requirement; do not display “synced” wording for static or unverified lyric text.
+- [ ] Do not create a public release until authorized online playback and real lyric timing are both end-to-end tested.
+- [ ] Produce a consistent full desktop Pi-Music UI mockup set for home, search, online results, Now Playing, synced lyrics, playlists, saved music, YouTube connection, unavailable/error, privacy, and settings states.
+- [ ] Keep the full UI mockup set original to Pi-Music’s late-1970s listening-room design; do not reproduce Spotube screens, layout, or branding.
+- [ ] Document all production dependencies, licenses, update strategy, and provider boundaries; rely only on maintained open-source foundations and official provider interfaces.
+- [ ] Keep copied stream extractors, downloaders, and undocumented provider clients out of Pi-Music’s dependency graph.
+- [x] Stop AI-generated Pi-Music mockup production; the user requested real screens from the running native app instead.
+- [ ] Build and present the home, search, online results, Now Playing, lyrics, playlists, saved music, YouTube connection, unavailable/error, privacy, and settings states as real Tauri application screens.
+- [ ] Capture screenshots from the running native Pi-Music app only after each named screen is actually implemented and visually verified.
+- [x] Research comparable open-source and commercial music-client categories: Spotube, Nuclear, Strawberry, Feishin, Cider, official YouTube clients, and desktop media players.
+- [x] Expand the comparable-client research into a per-client evidence matrix covering source model, playback backend, library/playlists, lyrics, privacy, license, stack, packaging, and UX for every reviewed client.
+- [x] Produce an original Pi-Music blueprint identifying safe patterns to adopt, components to build independently, and provider or license boundaries that must not be crossed.
+- [x] Document the online-only product rooms, application state model, delivery order, dependency policy, and evidence gates for Pi-Music’s production path.
+- [ ] Replace all preview-only online cards with account-gated real data before calling any Pi-Music screen functional.
+- [ ] Complete and test token refresh, reconnect, and disconnect after the verified secure Google desktop OAuth connection, with no token shown in the UI or logs.
+- [ ] Implement and test official YouTube search, playlist read/write, and real result-to-player selection on a connected account.
+- [ ] Implement and test a visible official YouTube player whose lifecycle events drive cueing, playing, pause, end, unavailable, and autoplay-blocked UI states.
+- [ ] Obtain and integrate a licensed timed-lyrics source, then test real player-clock lyric synchronization and no-lyrics recovery state.
+- [ ] Require installed Linux, Windows, and macOS build artifacts plus functional smoke evidence before considering any Pi-Music release.
+- [ ] Confirm that the supplied Google desktop OAuth client’s consent screen is configured and YouTube Data API v3 is enabled, then authorize a real test account through Pi-Music’s system-browser flow.
+- [x] Verify the Google desktop OAuth callback and diagnose the token-exchange failure without storing credentials; Google reported that the configured client requires a client secret.
+- [x] Add the required Google desktop OAuth client secret through secure project configuration only, pass it to the native host at runtime, and never expose it to the UI, repository, logs, or GitHub Actions output.
+- [x] Re-run a live Google PKCE account connection after secure client-secret provisioning and verify the approved callback, code exchange, and secure-storage write without displaying credential values.
+- [ ] Verify token refresh, disconnect, and re-connection using the production native Pi-Music window rather than the isolated OAuth harness.
+- [x] Detect that the sandbox Linux keyring acknowledged the OAuth write but did not retain a readable credential across a fresh native process; do not treat the prior callback as a durable connection proof.
+- [x] Replace the ephemeral keyring path with a native encrypted Stronghold credential vault and prove fresh-vault recovery in automated native testing; retain installed-app retention checks on Linux, Windows, and macOS as release evidence.
+- [ ] Re-run the approved Google OAuth flow after secure-store migration and verify a fresh Pi-Music process can read, refresh, and disconnect the stored connection without exposing credentials.
+- [x] Prove that a Pi-Music Stronghold vault encrypted with a private room key can be reopened by a fresh vault instance and recover its protected connection record in automated native testing.
+- [x] Complete a user-approved live Google exchange into a temporary encrypted vault, reopen the vault in a fresh native instance, verify a protected connection is present, and clear it without logging credentials.
+- [x] Run a user-approved, count-only YouTube search and authorized-playlist smoke check through Pi-Music’s host-only native data layer; do not retain or log account content.
+- [x] Wire returned YouTube search, playlist, and playlist-item data into the native Search and Playlists rooms with loading, empty, selection, and listener-safe recovery states; retain an installed-app connected-account verification before treating the screens as release-ready.
+- [x] Add an official visible YouTube IFrame Player bridge that queues selected returned videos, preserves provider controls, maps ready/state/error/autoplay-blocked events, and keeps direct media extraction out of Pi-Music; retain a real installed-app lifecycle test before release consideration.
+- [x] Require a visible, reversible acknowledgement of Pi-Music’s local privacy practice and the linked YouTube terms before opening an account connection; keep this consent separate from the provider’s own browser permission screen.
+- [x] Remove generated Tauri mobile scaffolding from the desktop-only Pi-Music source and exclude regenerated platform artifacts from GitHub synchronization.
