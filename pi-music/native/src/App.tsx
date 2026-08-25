@@ -33,8 +33,6 @@ import {
 import { VisibleYoutubePlayer } from "./VisibleYoutubePlayer";
 import "./App.css";
 
-type Palette = "coral" | "moss" | "blue" | "plum";
-
 type YoutubeVideo = { videoId: string; title: string; channelTitle: string; thumbnailUrl?: string };
 type YoutubePlaylist = { playlistId: string; title: string; itemCount: number; thumbnailUrl?: string };
 type YoutubePlaylistItem = { playlistItemId: string; videoId?: string; title: string; channelTitle: string; position: number; thumbnailUrl?: string };
@@ -49,13 +47,6 @@ const roomIcons: Record<OnlineRoom, "deck" | "crate" | "tuner" | "heart" | "swit
   Settings: "switch",
   Connect: "switch",
 };
-
-const previewShelves: Array<{ title: string; note: string; palette: Palette }> = [
-  { title: "Your next play", note: "arrives after you connect", palette: "coral" },
-  { title: "A saved favorite", note: "will sit here", palette: "moss" },
-  { title: "A playlist you love", note: "will appear here", palette: "blue" },
-  { title: "A small discovery", note: "will find its way in", palette: "plum" },
-];
 
 function PiLoop() {
   return <span className="pi-loop" aria-hidden="true"><i /><b /></span>;
@@ -294,7 +285,7 @@ function App() {
           ))}
         </nav>
 
-        {activeRoom === "Listen" && <ListenRoom onConnect={beginConnection} onSearch={openSearch} onCue={askToCue} />}
+        {activeRoom === "Listen" && <ListenRoom connected={connected} onConnect={beginConnection} onSearch={openSearch} onCue={askToCue} onPlaylists={() => setActiveRoom("Playlists")} />}
         {activeRoom === "Search" && <SearchRoom connection={connection} value={searchValue} cleanValue={cleanSearch} searchState={searchState} searchMessage={searchMessage} results={searchResults} onChange={setSearchValue} onConnect={beginConnection} onSearch={runSearch} onSelect={chooseVideo} />}
         {activeRoom === "Now Playing" && <NowPlayingRoom playback={playback} selectedVideo={selectedVideo} playerReady={playerReady} playerError={playerError} onConnect={beginConnection} onSearch={openSearch} onPlaybackState={setPlayback} onPlayerReady={setPlayerReady} onPlayerError={setPlayerError} onControllerReady={setPlayerController} />}
         {activeRoom === "Playlists" && <PlaylistsRoom connection={connection} playlists={playlists} playlistState={playlistState} playlistMessage={playlistMessage} openPlaylistTitle={openPlaylistTitle} playlistItems={playlistItems} playlistItemState={playlistItemState} playlistItemMessage={playlistItemMessage} onConnect={beginConnection} onOpenPlaylist={openPlaylist} onSelectVideo={chooseVideo} />}
@@ -319,7 +310,7 @@ function App() {
   );
 }
 
-function ListenRoom({ onConnect, onSearch, onCue }: { onConnect: () => void; onSearch: () => void; onCue: () => void }) {
+function ListenRoom({ connected, onConnect, onSearch, onCue, onPlaylists }: { connected: boolean; onConnect: () => void; onSearch: () => void; onCue: () => void; onPlaylists: () => void }) {
   return <section className="listening-home online-home">
     <div className="home-welcome"><div><span className="micro-label">SIDE A / ONLINE LISTENING ROOM</span><h1>the room is<br /><em>ready for sound.</em></h1></div><p>Connect once, then let Pi-Music keep the listening part calm, clear, and close at hand.</p></div>
     <section className="record-of-day online-record" aria-label="Start listening">
@@ -327,7 +318,7 @@ function ListenRoom({ onConnect, onSearch, onCue }: { onConnect: () => void; onS
       <div className="record-copy"><span className="micro-label">YOUR ROOM / WAITING TO CONNECT</span><h2>let’s make<br />some <em>noise.</em></h2><p>Pi-Music is online-only. Your account connection comes first, then the search, playlists, player, and words can come alive together.</p><div className="record-actions"><button className="play-sticker" onClick={onConnect}><Wifi size={17} /> connect your room</button><button className="soft-sticker" onClick={onSearch}><Search size={16} /> visit search</button></div></div>
       <div className="record-object" aria-hidden="true"><div className="cover-sleeve"><span>ONLINE<br />SIGNAL</span><i /></div><div className="vinyl-disc"><span /></div><div className="record-tab">SET ONE<br /><b>waiting</b></div><div className="wood-plinth" /></div>
     </section>
-    <section className="tile-shelf" aria-labelledby="online-preview-title"><div className="section-label-row"><div><span className="micro-label">THE SHAPES OF YOUR SHELF</span><h2 id="online-preview-title">real rooms, waiting for the music</h2></div><button className="text-link" onClick={onCue}>open player <ArrowRight size={16} /></button></div><div className="track-tiles">{previewShelves.map((item) => <button key={item.title} className={`track-tile ${item.palette}`} onClick={onConnect}><span className="tile-cover"><i /></span><span className="tile-text"><b>{item.title}</b><small>{item.note}</small></span><span className="tile-stamp">online only</span><span className="tile-play"><ChevronRight size={14} /></span></button>)}</div></section>
+    <section className="patch-bay-teaser listening-route-note" aria-label="Open a real listening room"><div className="patch-copy"><span className="micro-label">THE NEXT REAL THING</span><h2>{connected ? <>choose a<br /><em>real room.</em></> : <>connect, then<br /><em>begin gently.</em></>}</h2><p>{connected ? "Search and playlists call your connected room. The player stays empty until you choose a returned record." : "Pi-Music will not invent a shelf before your account returns something real."}</p><div className="record-actions"><button className="soft-sticker" onClick={connected ? onSearch : onConnect}>{connected ? "open search" : "connect first"}</button><button className="soft-sticker" onClick={onPlaylists}>open playlists</button><button className="soft-sticker" onClick={onCue}>open player</button></div></div><div className="patch-route"><div className="patch-socket metadata"><RetroIcon kind="tuner" /><span>Find</span><small>returned search</small></div><div className="patch-wire" /><div className="patch-socket playback"><RetroIcon kind="deck" /><span>Hear</span><small>visible player</small></div><div className="patch-wire coral-wire" /><div className="patch-socket lyrics"><RetroIcon kind="sleeve" /><span>Read</span><small>licensed later</small></div></div></section>
     <section className="patch-bay-teaser" aria-label="How the online room is arranged"><div className="patch-copy"><span className="micro-label">ONE QUIET PATH</span><h2>find it,<br />hear it,<br />read along.</h2><p>Search, visible playback, and liner words each have a proper place in the room.</p><button className="patch-link" onClick={onSearch}>see the search room <ChevronRight size={16} /></button></div><div className="patch-route"><div className="patch-socket metadata"><RetroIcon kind="tuner" /><span>Find</span><small>search & playlists</small></div><div className="patch-wire" /><div className="patch-socket playback"><RetroIcon kind="deck" /><span>Hear</span><small>visible player</small></div><div className="patch-wire coral-wire" /><div className="patch-socket lyrics"><RetroIcon kind="sleeve" /><span>Read</span><small>timed words</small></div></div></section>
   </section>;
 }

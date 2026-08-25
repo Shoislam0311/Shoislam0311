@@ -92,7 +92,7 @@
 - [x] Expand the comparable-client research into a per-client evidence matrix covering source model, playback backend, library/playlists, lyrics, privacy, license, stack, packaging, and UX for every reviewed client.
 - [x] Produce an original Pi-Music blueprint identifying safe patterns to adopt, components to build independently, and provider or license boundaries that must not be crossed.
 - [x] Document the online-only product rooms, application state model, delivery order, dependency policy, and evidence gates for Pi-Music’s production path.
-- [ ] Replace all preview-only online cards with account-gated real data before calling any Pi-Music screen functional.
+- [x] Replace preview-only landing cards with connection-aware routes into real Search, Playlists, and visible-player rooms; retain installed-app connected-account evidence before calling the screens release-ready.
 - [ ] Complete and test token refresh, reconnect, and disconnect after the verified secure Google desktop OAuth connection, with no token shown in the UI or logs.
 - [ ] Implement and test official YouTube search, playlist read/write, and real result-to-player selection on a connected account.
 - [ ] Implement and test a visible official YouTube player whose lifecycle events drive cueing, playing, pause, end, unavailable, and autoplay-blocked UI states.
