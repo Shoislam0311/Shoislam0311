@@ -119,4 +119,5 @@
 - [x] Remove the non-persistent Saved-room counter and present an honest disabled state until an officially permitted saved/favorites capability is designed and authorized.
 - [x] Translate host-side YouTube discovery and playlist failures into listener-safe recovery copy so raw provider, network, or implementation text never appears in Pi-Music rooms.
 - [x] Add a focus-safe desktop keyboard shortcut for play/pause that controls only the official visible player when a returned video has been selected.
+- [x] Remove the remaining listener-visible implementation jargon from the connection recovery message while retaining a clear retry path.
 - [x] Audit all remaining Pi-Music documentation for superseded Android/iPhone/Spotify/JioSaavn/local-file product language and either update it to the desktop-only YouTube scope or label it explicitly as historical research; see `docs/documentation-scope-audit.md`.
