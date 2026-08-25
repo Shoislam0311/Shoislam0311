@@ -1,8 +1,9 @@
 import { expect, test } from "vitest";
 
 test("the secure Google desktop client configuration is accepted by Google", async () => {
-  const clientId = process.env.VITE_YOUTUBE_DESKTOP_CLIENT_ID;
-  const clientSecret = process.env.YOUTUBE_DESKTOP_CLIENT_SECRET;
+  const runtimeEnvironment = (globalThis as unknown as { process?: { env?: Record<string, string | undefined> } }).process?.env;
+  const clientId = runtimeEnvironment?.VITE_YOUTUBE_DESKTOP_CLIENT_ID;
+  const clientSecret = runtimeEnvironment?.YOUTUBE_DESKTOP_CLIENT_SECRET;
 
   expect(clientId, "desktop client ID must be configured").toBeTruthy();
   expect(clientSecret, "desktop client secret must be configured").toBeTruthy();
