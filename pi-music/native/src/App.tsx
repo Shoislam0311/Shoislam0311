@@ -255,6 +255,18 @@ function App() {
     else playerController.play();
   };
 
+  useEffect(() => {
+    const handlePlaybackShortcut = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (event.code !== "Space" || !selectedVideo || !playerController || target?.isContentEditable || target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement) return;
+      event.preventDefault();
+      if (playback === "playing") playerController.pause();
+      else playerController.play();
+    };
+    window.addEventListener("keydown", handlePlaybackShortcut);
+    return () => window.removeEventListener("keydown", handlePlaybackShortcut);
+  }, [playback, playerController, selectedVideo]);
+
   const disconnect = async () => {
     try { await invoke("disconnect_google"); } catch { /* Preview mode has no native credential store. */ }
     setConnection("not-connected");
