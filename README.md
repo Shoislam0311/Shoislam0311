@@ -73,8 +73,9 @@ usually found somewhere between frontend polish, backend systems, deployment rab
 | project | what it does | stack | ★ |
 | :-- | :-- | :--: | :--: |
 | [**aniraku**](https://github.com/Aniraku/Aniraku) | web client — catalog, sub/dub streaming, watch history | React · Vite · Supabase | ![stars](https://img.shields.io/github/stars/Aniraku/Aniraku?style=flat-square&color=a8c9e0&label=) |
-| [**aniraku-app**](https://github.com/Aniraku/Aniraku-App) | native android client — playback, library, downloads | ![version](https://img.shields.io/badge/v4.3-c9a8e0?style=flat-square) Expo · React Native | ![stars](https://img.shields.io/github/stars/Aniraku/Aniraku-App?style=flat-square&color=e0a8c9&label=) |
+| [**aniraku-app**](https://github.com/Aniraku/Aniraku-App) | native android client — playback, library, downloads | ![version](https://img.shields.io/github/v/release/Aniraku/Aniraku-App?style=for-the-badge&color=a78bfa&labelColor=1e1b4b) Expo · React Native | ![stars](https://img.shields.io/github/stars/Aniraku/Aniraku-App?style=flat-square&color=e0a8c9&label=) |
 | [**aniraku-backend**](https://github.com/Aniraku/Aniraku-Backend) | api, auth, metadata, provider coordination | Go | ![stars](https://img.shields.io/github/stars/Aniraku/Aniraku-Backend?style=flat-square&color=a8e0c0&label=) |
+| [**anilist-mirror**](https://github.com/Shoislam0311/anilist-offline-db) | Metadata,Mirror of Anilist for Aniraku Test branch| Python · Java Script | ![stars](https://img.shields.io/github/stars/Shoislam0311/anilist-offline-db?style=flat-square&color=a8e0c0&label=) |
 
 <p><sub>one idea, three platforms, zero chill — more on the way as soon as this button feels right.</sub></p>
 
@@ -135,7 +136,7 @@ usually found somewhere between frontend polish, backend systems, deployment rab
 
 <div align="center">
 
-<a href="https://open.spotify.com/user/31pxuilycotlyuaehfphqimevlaq"><img src="https://img.shields.io/badge/Spotify-Listen-c9a8e0?style=flat-square&logo=spotify&logoColor=white" alt="Spotify" /></a>
+<a href="https://open.spotify.com/playlist/4Yc7qGDZ0v1WICx1d0rHjx"><img src="https://img.shields.io/badge/Spotify-Listen-c9a8e0?style=flat-square&logo=spotify&logoColor=white" alt="Spotify" /></a>
 <a href="https://x.com/sho_islam0311"><img src="https://img.shields.io/badge/X-Follow-c9a8e0?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
 <a href="https://www.instagram.com/sho.islam0311/"><img src="https://img.shields.io/badge/Instagram-Follow-c9a8e0?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" /></a>
 <a href="https://www.threads.com/@sho.islam0311"><img src="https://img.shields.io/badge/Threads-Follow-c9a8e0?style=flat-square&logo=threads&logoColor=white" alt="Threads" /></a>
